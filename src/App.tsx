@@ -6,6 +6,9 @@ function App() {
   return (
     <div className="App">
       <h1>ModernMart</h1>
+      <p>
+        Welcome to ModernMart, your one-stop shop for all your shopping needs!
+      </p>
     </div>
   );
 }
