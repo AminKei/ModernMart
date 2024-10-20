@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>ModernMart</h1>
-      <p>
-        Welcome to ModernMart, your one-stop shop for all your shopping needs!
-      </p>
+      <h2>ModernMart</h2>
     </div>
   );
 }
