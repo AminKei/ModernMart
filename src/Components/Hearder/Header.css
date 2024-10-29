@@ -1,0 +1,24 @@
+.cercel-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #0a0097;
+  opacity: 0.5;
+  z-index: -1;
+  box-shadow: #0a0097 1px 1px 80px 100px;
+}
+.cercel-top-right {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  right: 20px;
+  background-color: #940000;
+  opacity: 0.5;
+  z-index: -1;
+  box-shadow: #940000 1px 1px 100px 100px;
+}
