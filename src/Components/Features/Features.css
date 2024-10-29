@@ -1,0 +1,27 @@
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  padding: 40px 20px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature p {
+  font-size: 12px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

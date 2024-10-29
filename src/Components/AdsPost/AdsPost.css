@@ -1,0 +1,38 @@
+.div-root-ads-post {
+  display: flex;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  gap: 40px;
+  border-image: linear-gradient(90deg, #ff5733, #167ee6) 2;
+  width: 100%;
+}
+.child-left img {
+  display: flex;
+  height: 100%;
+}
+.child-right {
+  font-weight: bold;
+  display: grid;
+  padding: 20px;
+}
+.child-right button {
+  width: 50%;
+  border-radius: 8px;
+  background-color: transparent;
+  border: white solid 2px;
+  color: white;
+  height: 50px;
+}
+.child-right p {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .div-root-ads-post {
+    display: none;
+  }
+  .child-right{
+    font-size: 8px;
+  }
+}

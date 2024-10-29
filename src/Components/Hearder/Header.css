@@ -22,3 +22,14 @@
   z-index: -1;
   box-shadow: #940000 1px 1px 100px 100px;
 }
+
+@media only screen and (max-width: 900px) {
+  .cercel-top-right {
+    width: 130px;
+    height: 130px;
+  }
+  .cercel-bottom-left {
+    width: 130px;
+    height: 130px;
+  }
+}
