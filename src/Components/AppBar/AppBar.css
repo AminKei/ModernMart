@@ -1,0 +1,12 @@
+.div-root-appbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-texts-appbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
