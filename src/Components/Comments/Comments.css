@@ -11,12 +11,16 @@
 
 .comments-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
 }
 
 .comment-card {
   border-radius: 10px;
+  width: 430px;
+  height: 185px;
   padding: 20px;
   border: solid 1px #818181;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -1,5 +1,4 @@
 import Button from "../../BaseComponents/Ui/Button/Button";
-import Input from "../../BaseComponents/Ui/Input/Input";
 import "./Footer.css";
 import ItemIcons from "./ItemIcons";
 const Footer = () => {
@@ -77,8 +76,8 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          © Create by <a href="">https://github.com/AminKei</a> Untitled UI. All
-          rights reserved.
+          © Create by <a href="https://github.com/AminKei">Amin Keimasi</a>{" "}
+          Untitled UI. All rights reserved.
         </p>
         <div>
           <ItemIcons />

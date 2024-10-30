@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Header from "./Components/Hearder/Header";
+import NavigationBar from "./Components/NavigationBar/NavigationBar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,6 +13,7 @@ root.render(
   <React.StrictMode>
     <Header>
       <App />
+      <NavigationBar />
     </Header>
   </React.StrictMode>
 );

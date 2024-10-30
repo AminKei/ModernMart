@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <AppBar />
-      <Comments/>
+      {/* <Comments/> */}
       {/* <AdsPost /> */}
       <Features />
       <Footer />
