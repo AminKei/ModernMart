@@ -1,3 +1,5 @@
+import Button from "../../BaseComponents/Ui/Button/Button";
+import Input from "../../BaseComponents/Ui/Input/Input";
 import "./Footer.css";
 import ItemIcons from "./ItemIcons";
 const Footer = () => {
@@ -5,11 +7,13 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <div className="logo-icon">YasHUB</div>
+          <div className="logo-icon">ModernMart</div>
           <p>
-            Design amazing digital experiences that create more happy in the
+            Design Design amazing digital experiences that create more happy in
+            the world. amazing digital experiences that create more happy in the
             world.
           </p>
+          <Button>Contact Us</Button>
         </div>
         <div className="footer-links">
           <div className="footer-column">
@@ -72,9 +76,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2077 Untitled UI. All rights reserved.</p>
+        <p>
+          © Create by <a href="">https://github.com/AminKei</a> Untitled UI. All
+          rights reserved.
+        </p>
         <div>
-            <ItemIcons/>
+          <ItemIcons />
         </div>
       </div>
     </footer>
