@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Header from "./Components/Hearder/Header";
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
+import PlayGround from "./Tests/Components/PlayGround";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +16,7 @@ root.render(
       <App />
       <NavigationBar />
     </Header>
+      {/* <PlayGround/> */}
   </React.StrictMode>
 );
 

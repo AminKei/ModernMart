@@ -1,4 +1,5 @@
 import Input from "../../BaseComponents/Ui/Input/Input";
+import SearchBar from "../SearchBar/SearchBar";
 import "./AppBar.css";
 const AppBar = () => {
   return (
@@ -19,6 +20,7 @@ const AppBar = () => {
         </div>
       </div>
       {/* <Input placeholder="Search" /> */}
+      <SearchBar/>
     </div>
   );
 };
