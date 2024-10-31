@@ -12,7 +12,7 @@ const LatestProducts = () => {
           padding: "20px",
         }}
         slidesPerView={5}
-        spaceBetween={10}
+        spaceBetween={1}
         navigation={true}
         pagination={{
           clickable: true,

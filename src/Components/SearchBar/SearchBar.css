@@ -1,6 +1,7 @@
 /* SearchComponent.css */
 .search-container {
   position: relative;
+  z-index: 10000;
 }
 
 .search-icon {

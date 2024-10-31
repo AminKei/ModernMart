@@ -1,0 +1,60 @@
+.div-container {
+  justify-content: space-around;
+  align-items: center;
+  display: grid;
+  /* height: 500px; */
+  margin-top: 7vh;
+}
+.title {
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  z-index: 10;
+  border-radius: 100%;
+  background-color: black;
+  box-shadow: 10px 0px 100px 100px rgb(0, 0, 0);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.center-image {
+  z-index: 0;
+  position: relative;
+  top: -10vh;
+}
+.center-button {
+  z-index: 10;
+  border-radius: 100%;
+  background-color: black;
+  box-shadow: 10px 0px 100px 150px rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: -13vh;
+  margin-bottom: 15vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .div-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .title {
+    font-size: 20px;
+    margin-top: 5vh;
+  }
+  .center-image {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+}
+.center-button {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+}
+}
