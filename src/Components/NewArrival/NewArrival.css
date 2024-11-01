@@ -1,0 +1,22 @@
+.new-arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+.item-new-arrival{  
+    background-color: #1e1e1e; /* Card background */  
+    border-radius: 10px; /* Rounded corners */  
+    padding: 20px;  
+    color: white; /* Text color */  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */  
+    transition: transform 0.2s; /* Animation effect */  
+  }  
+  
+  .item-new-arrival:hover {  
+    transform: translateY(-5px); /* Lift effect on hover */  
+  }  

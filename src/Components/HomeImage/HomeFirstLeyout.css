@@ -2,7 +2,6 @@
   justify-content: space-around;
   align-items: center;
   display: grid;
-  /* height: 500px; */
   margin-top: 7vh;
 }
 .title {
@@ -20,6 +19,7 @@
   z-index: 0;
   position: relative;
   top: -10vh;
+  height: 500px;
 }
 .center-button {
   z-index: 10;
@@ -51,10 +51,10 @@
     height: 100%;
     top: 0;
     box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
-}
-.center-button {
+  }
+  .center-button {
     margin-top: 10vh;
     margin-bottom: 10vh;
     box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
-}
+  }
 }

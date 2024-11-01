@@ -21,7 +21,7 @@ const HomeFirstLeyout = () => {
               bgColor="#000"
               color="white"
               border="solid 2px white"
-              width={300}
+              width={340}
             >
               Bid on OpenSea
             </Button>

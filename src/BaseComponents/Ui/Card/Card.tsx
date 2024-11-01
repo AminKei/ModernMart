@@ -2,11 +2,11 @@ import React from "react";
 import "./Card.css";
 
 interface CardProps {
-  imageUrl: string;
-  title: string;
-  description: string;
-  options: string[];
-  price: number;
+  imageUrl?: string;
+  title?: string;
+  description?: string;
+  options?: string[];
+  price?: number;
 }
 
 const Card: React.FC<CardProps> = ({

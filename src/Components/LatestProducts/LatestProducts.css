@@ -1,0 +1,26 @@
+.titles-top-lasted {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 10vh; */
+  /* margin-bottom: 10vh; */
+  font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  .titles-top-lasted {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .titles-top-lasted h1 {
+    font-size: 20px;
+    margin-top: 5vh;
+  }
+  .titles-top-lasted button {
+    font-size: 10px;
+    margin-top: 5vh;
+  }
+    
+}

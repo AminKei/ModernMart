@@ -3,7 +3,7 @@ import "./NavigationBar.css";
 const NavigationBar = () => {
   return (
     <div className="bottom-nav">
-      <div className="nav-item">
+      <div className="nav-item" onClick={()=>document.location = "/"}>
         <img src={`${process.env.PUBLIC_URL}/icons/home.png`} />
       </div>
       <div className="nav-item">
