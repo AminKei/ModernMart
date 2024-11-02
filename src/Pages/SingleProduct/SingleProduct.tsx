@@ -5,6 +5,8 @@ import "./SingleProduct.css";
 import Footer from "../../Components/Footer/Footer";
 import LatestProducts from "../../Components/LatestProducts/LatestProducts";
 import { unstable_HistoryRouter } from "react-router-dom";
+import SizeElement from "../../Components/SizeElement/SizeElement";
+import LikeElement from "../../Components/LikeElement/LikeElement";
 
 const SingleProduct = () => {
   // const history = unstable_HistoryRouter(); // For navigating back
@@ -38,9 +40,10 @@ const SingleProduct = () => {
             <p>Elasticated neckline, hemline and cuffs</p>
             <p>Made in Russia</p>
           </div>
-          <p>Size</p>
+          <SizeElement sizes={["XS", "S", "M"]} label="Size" />
+          <LikeElement/>
           <div>
-            <Button width={300} height={50}>
+            <Button width={330} height={50}>
               Add To Cart
             </Button>
           </div>

@@ -1,0 +1,37 @@
+/* SizeSelector.css */  
+.size-selector {  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+.size-label {  
+    font-size: 16px;  
+    color: white;  
+    margin-bottom: 8px;  
+}  
+
+.size-buttons {  
+    display: flex; 
+    gap: 3px; 
+}  
+
+.size-button {  
+    padding: 10px 20px;  
+    border-radius: 5px;
+    gap: 20px;
+    border: none;  
+    font-size: 16px;  
+    cursor: pointer;  
+    background-color: #f0f0f0;  
+    color: #333;  
+    transition: background-color 0.3s, color 0.3s;  
+  }  
+  
+  .size-button.active {  
+    background-color: #d0d0d0;  
+    color: #000;  
+  }  
+  
+  .size-button:hover:not(.active) {  
+    background-color: #e0e0e0;  
+  }

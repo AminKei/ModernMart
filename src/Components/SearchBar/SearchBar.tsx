@@ -20,6 +20,7 @@ const SearchBar = () => {
       )}
       {isOpen && (
         <>
+        
           <div className="div-search-input">
             <img
               src={`${process.env.PUBLIC_URL}/icons/search-black.png`}

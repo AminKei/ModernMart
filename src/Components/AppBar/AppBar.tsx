@@ -5,7 +5,7 @@ const AppBar = () => {
   return (
     <div className="div-root-appbar">
       <div className="item-texts-appbar">
-        <h4>/ModernMart</h4>
+        <h4>ModernMart</h4>
         <div
           style={{
             alignItems: "center",
