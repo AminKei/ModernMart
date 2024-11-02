@@ -30,10 +30,12 @@ const Input: React.FC<PropsInput> = (props) => {
       style={{
         border: "solid 1px white",
         background: "transparent",
-        padding: "10px",
+        padding: "10px 0px",
         width: width || "100%",
-        borderRadius: "18px",
+        borderRadius: "5px",
         height: heigth || "25px",
+        color: "white",
+        fontWeight: "bold",
       }}
       placeholder={placeholder}
       className={className}

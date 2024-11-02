@@ -4,9 +4,10 @@ import Button from "../../BaseComponents/Ui/Button/Button";
 import "./SingleProduct.css";
 import Footer from "../../Components/Footer/Footer";
 import LatestProducts from "../../Components/LatestProducts/LatestProducts";
+import { unstable_HistoryRouter } from "react-router-dom";
 
 const SingleProduct = () => {
-  // const history = useHistory(); // For navigating back
+  // const history = unstable_HistoryRouter(); // For navigating back
 
   const handleBackClick = () => {
     // history.goeBack(); // Navigate back to the previous page

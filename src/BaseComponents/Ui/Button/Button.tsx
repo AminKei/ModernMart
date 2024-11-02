@@ -45,12 +45,13 @@ const Button: React.FC<ButtonProps> = (props) => {
         width: width || "100%",
         height: height,
         borderRadius: radius || "5px",
-        padding: padding || ".7rem .6rem",
+        padding: padding || "10px 12px",
         fontSize: fontSize,
         cursor: "pointer",
         margin: margin,
         bottom: bottom,
         position: position,
+        fontWeight:"bold"
       }}
       onClick={onClick}
       className={className}

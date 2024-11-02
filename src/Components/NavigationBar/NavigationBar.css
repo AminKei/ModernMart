@@ -7,12 +7,15 @@
   height: 60px;
   border-radius: 30px;
   position: fixed;
-  bottom: 0;
-  left: 40%;
-  width: 400px;
-  right: 0;
+  bottom: 0; /* این پروپرتی باعث می‌شود که همیشه در پایین صفحه باشد */
+  left: 50%; /* برای قرار دادن ناوبری در وسط صفحه */
+  transform: translateX(
+    -50%
+  ); /* جابجایی به سمت چپ به مقدار نیمی از عرض کامپوننت برای مرکز کردن */
+  width: 400px; /* می‌توانید این مقدار را به دلخواه تغییر دهید */
   z-index: 1000;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .nav-item {
@@ -43,9 +46,10 @@
 @media only screen and (max-width: 750px) {
   .bottom-nav {
     width: 100%;
-    left: 0;
     justify-content: space-around;
     align-items: center;
     display: flex;
+    left: 50%; /* برای قرار دادن ناوبری در وسط صفحه */
+    transform: translateX(-50%);
   }
 }

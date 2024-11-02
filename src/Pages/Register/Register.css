@@ -1,0 +1,70 @@
+.div-root-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+
+.div-container-login {
+  width: 30%;
+  padding: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+.inputs-login {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+}
+
+.inputs-login label {
+  font-weight: bold;
+}
+
+.discraption-log-sign {
+  text-align: center;
+  color: gray;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .div-container-login {
+    width: 100%; /* Adjust width for tablets */
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .div-root-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .div-container-login {
+    width: 100%; /* Increase width for small devices */
+    margin-top: -7vh;
+  }
+  .discraption-log-sign {
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .div-container-login {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+  .inputs-login {
+    gap: 15px; /* Reduce gap between inputs */
+  }
+
+  .inputs-login label {
+    font-size: 14px; /* Adjust font size for labels */
+  }
+}

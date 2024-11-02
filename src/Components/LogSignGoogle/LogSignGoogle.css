@@ -1,0 +1,22 @@
+.google-signup-button {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px 0px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.google-signup-button:hover {
+  background-color: #1d1c1c;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

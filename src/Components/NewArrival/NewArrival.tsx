@@ -30,28 +30,7 @@ const items = [
 const NewArrival = () => {
   return (
     <div className="conteiner-new-arrival">
-      <div className="new-arrival-grid">
-        <div className="item-new-arrival">
-          <h2>PlayStation 5</h2>
-          <p>Black and White version of the PS5 coming out on sale.</p>
-          <a href="#">Shop Now</a>
-        </div>
-        <div className="item-new-arrival">
-          <h2>Women’s Collections</h2>
-          <p>Featured woman collections that give you another vibe.</p>
-          <a href="#">Shop Now</a>
-        </div>
-        <div className="item-new-arrival">
-          <h2>Speakers</h2>
-          <p>Amazon wireless speakers.</p>
-          <a href="#">Shop Now</a>
-        </div>
-        <div className="item-new-arrival">
-          <h2>Perfume</h2>
-          <p>GUCCI INTENSE OUD EDP.</p>
-          <a href="#">Shop Now</a>
-        </div>
-      </div>
+      
     </div>
   );
 };
