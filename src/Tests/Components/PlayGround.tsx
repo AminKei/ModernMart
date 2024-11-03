@@ -1,11 +1,15 @@
-import NewArrival from '../../Components/NewArrival/NewArrival';
-import './playGround.css';
-const playGround = () => {
-    return ( 
-        <div>
-            <NewArrival/>
-        </div>
-     );
-}
- 
-export default playGround;
+import React, { useState } from "react";
+import NewArrival from "../../Components/NewArrival/NewArrival";
+import "./playGround.css";
+
+const PlayGround = () => {
+
+
+  return (
+    <div>
+     
+    </div>
+  );
+};
+
+export default PlayGround;

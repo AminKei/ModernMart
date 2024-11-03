@@ -14,9 +14,9 @@ import NewArrival from "../../Components/NewArrival/NewArrival";
 const Home = () => {
   return (
     <>
-          <AppBar />
-        <HomeFirstLeyout/>
-        {/* <CategorySlide/> */}
+      <AppBar />
+      <HomeFirstLeyout />
+      {/* <CategorySlide/> */}
       <LatestProducts />
       {/* <NewArrival/> */}
       {/* <Comments/> */}

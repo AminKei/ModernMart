@@ -1,61 +1,64 @@
 import { useState } from "react";
 import "./SearchBar.css";
+import Input from "../../BaseComponents/Ui/Input/Input";
 
 const SearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [overview, setOverView] = useState(false);
 
-  const toggleSearch = () => {
+  const toggleModal = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    setSearchTerm(""); // Clear the search term on close
+  };
+
   return (
-    <div className="search-container">
-      {!isOpen && (
-        <div className="search-icon" onClick={toggleSearch}>
-          <img
-            src={`${process.env.PUBLIC_URL}/icons/search.png`}
-            alt="Search Icon"
-          />
-        </div>
+    <div style={{position:"absolute", right:"30px", display:'flex', top:"50px"}}>
+      {!isOpen && ( // Only render the button if the modal is not open
+        <img
+          onClick={toggleModal}
+          src={`${process.env.PUBLIC_URL}/icons/search.png`}
+          alt="Search Icon"
+        />
       )}
       {isOpen && (
-        <>
-        
-          <div className="div-search-input">
+        <div className="modal-overlay">
+          <div className="modal">
             <img
               src={`${process.env.PUBLIC_URL}/icons/search-black.png`}
-              alt="Search Input Icon"
+              alt=""
             />
-            <input
-              type="text"
-              placeholder="Search For Product, actions"
+            <Input
+              color="black"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              placeholder="Type your search here..."
               className="search-input"
             />
+
             <img
+              onClick={handleCloseModal}
               src={`${process.env.PUBLIC_URL}/icons/close.png`}
-              alt="Close Icon"
-              onClick={toggleSearch}
+              alt=""
             />
           </div>
-          <div className="search-dropdown">
-            <div className="last-search">
-              <h6>Last search:</h6>
-              <div className="item-search-lasted">
-                <p>shoes Women</p>
-                <p>sport shoes</p>
-                <p>shoes Women</p>
-                <p>kids shoes</p>
-                <p>shoes man</p>
-                <p>shoes man</p>
-              </div>
+          {searchTerm.length > 0 && (
+            <div className="result-search">
+              <p>Nothig</p>
+              <p>Nothig mangemant</p>
+              <p>Nothig sozuki marinos</p>
+              <p>Nothig hector gomez</p>
             </div>
-            <div className="results">
-              <p>Formal Shoe man</p>
-              <p>Formal Shoe man in Demerail</p>
-              <p>Formal Shoe man in Demerail</p>
-            </div>
-          </div>
-        </>
+          )}
+        </div>
       )}
     </div>
   );

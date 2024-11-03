@@ -10,6 +10,7 @@ interface PropsInput {
   value?: string;
   ref?: string;
   autoFocus?: boolean;
+  color?:string
 }
 
 const Input: React.FC<PropsInput> = (props) => {
@@ -23,6 +24,7 @@ const Input: React.FC<PropsInput> = (props) => {
     autoFocus,
     placeholder,
     className,
+    color
   } = props;
 
   return (
@@ -34,8 +36,9 @@ const Input: React.FC<PropsInput> = (props) => {
         width: width || "100%",
         borderRadius: "5px",
         height: heigth || "25px",
-        color: "white",
+        color:  color || "white",
         fontWeight: "bold",
+        outline:"none"
       }}
       placeholder={placeholder}
       className={className}

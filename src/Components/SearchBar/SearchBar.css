@@ -1,116 +1,40 @@
-/* SearchComponent.css */
-.search-container {
-  position: relative;
-  z-index: 10000;
-}
+.modal-overlay {  
+  position: absolute; /* در حالت دسکتاپ */  
+  right: 30px; /* فاصله از سمت راست */  
+  width: 500px; /* عرض در حالت دسکتاپ */  
+  z-index: 1000;  
+}  
 
-.search-icon {
-  cursor: pointer;
-  position: relative;
-}
+@media only screen and (max-width: 700px) {  
+  .modal-overlay {  
+    position: fixed; /* در حالت موبایل */  
+    top: 20px; /* فاصله از بالا */  
+    left: 50%; /* مرکز افقی */  
+    transform: translateX(-50%); /* جابجایی برای مرکزی کردن */  
+    width: 90%; /* عرض در حالت موبایل */  
+    max-width: 400px; /* حداکثر عرض */  
+  }  
+}  
 
-.search-dropdown {
-  position: absolute;
-  width: 400px; /* Use full width of the container */
-  max-width: 400px; /* Set a max width */
-  top: 5vh;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease;
-  z-index: 10;
-  overflow-y: auto; /* Use auto for better scrolling */
-  max-height: 300px; /* Limit height */
-}
+.modal {  
+  background-color: white;  
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  border-radius: 5px;  
+  gap: 2px;  
+  padding: 1px 10px;  
+}  
 
-.div-search-input {
-  width: 400px; /* Full width */
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.search-input {
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  outline: none;
-}
-.item-search-lasted {
-  cursor: pointer;
-  /* border-radius: 4px; */
-  display: flex;
-  padding: 10px;
-  color: #333;
-  font-size: 10px;
-  justify-content: space-between;
-  border-bottom: #868686 solid 1px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.last-search h6 {
-  margin: 5px 0;
-  color: rgb(163, 163, 163);
-  font-size: 12px;
-}
-
-.last-search ul {
-  cursor: pointer;
-  color: #000;
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 5px; /* Space between items */
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
-}
-
-.last-search li {
-  padding: 5px; /* Add padding for better click area */
-  transition: background-color 0.2s; /* Smooth background transition */
-}
-
-.last-search li:hover {
-  background-color: #ececec; /* Highlight on hover */
-}
-
-.results {
-  margin-top: 10px;
-}
-
-@media only screen and (max-width: 768px) {
-  .search-dropdown {
-    width: 100%; /* Use a percentage for better responsiveness */
-    margin-top: 4vh; /* حذف مقدار margin-top برای جلوگیری از فاصله */
-    top: 2vh;
-  }
-  .div-search-input {
-    width: 100%;
-  }
-  .search-icon {
-    width: 100%;
-  }
-  .item-search-lasted {
-    font-size: 5px;
-  }
+.result-search {  
+  display: grid;  
+  background-color: white;  
+  align-items: center;  
+  justify-content: space-between;  
+  gap: 10px;  
+  margin-top: 1vh;  
+  border-radius: 5px;  
+  color: black;  
+  padding: 10px;  
+  overflow-y: scroll;  
 }
