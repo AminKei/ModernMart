@@ -1,0 +1,35 @@
+.new-arrival-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  color: rgb(16, 20, 255);
+}
+
+.item-left {
+  background-color: white;
+  width: 49%;
+  height: 80vh;
+}
+.item-right {
+  width: 49%;
+  height: 80vh;
+  justify-content: space-between;
+}
+.item-right-top {
+  height: 43vh;
+}
+
+.item-right-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item-right-1 {
+  width: 49%;
+  height: 40vh;
+}
+.item-right-2 {
+  width: 49%;
+}

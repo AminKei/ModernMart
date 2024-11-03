@@ -1,13 +1,10 @@
-import React, { useState } from "react";
 import NewArrival from "../../Components/NewArrival/NewArrival";
 import "./playGround.css";
 
 const PlayGround = () => {
-
-
   return (
-    <div>
-     
+    <div >
+      <NewArrival/>
     </div>
   );
 };
