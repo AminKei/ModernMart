@@ -17,10 +17,16 @@ const Home = () => {
       <AppBar />
       <HomeFirstLeyout />
       {/* <CategorySlide/> */}
+      <hr />
       <LatestProducts />
+      <hr />
+      {/* <AdsPost /> */}
+      {/* <hr /> */}
+      {/* <LatestProducts /> */}
+      {/* <hr /> */}
+
       {/* <NewArrival/> */}
       {/* <Comments/> */}
-      {/* <AdsPost /> */}
       <Features />
       <Footer />
     </>

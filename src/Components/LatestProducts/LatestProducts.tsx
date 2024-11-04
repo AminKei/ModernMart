@@ -5,18 +5,21 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./LatestProducts.css";
+import CountDown from "../CountDown/CountDown";
 const LatestProducts = () => {
   return (
     <>
       <div className="titles-top-lasted">
-        <h2>Don't miss the latest products!</h2>
-        <h2>Conut Down</h2>
-        <p>See More</p>
+        <h2>
+          Don't miss the latest products! <p>See More</p>
+        </h2>
+        <CountDown targetDate="2025-3-10" />
       </div>
 
       <Swiper
         style={{
           padding: "20px",
+          marginBottom: "5vh",
         }}
         slidesPerView={5}
         spaceBetween={0}
@@ -51,7 +54,7 @@ const LatestProducts = () => {
       >
         {Array.from({ length: 10 }).map((_, index) => (
           <SwiperSlide key={index}>
-            <div onClick={()=>document.location = "/singleproduct"}>
+            <div onClick={() => (document.location = "/singleproduct")}>
               <Card
                 imageUrl="https://clipart-library.com/images_k/shoe-transparent-background/shoe-transparent-background-12.png"
                 title="Morning Set"
