@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Hearder/Header";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import Cart from "./Pages/Cart/Cart";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -28,6 +29,7 @@ root.render(
           <Route path="/singleproduct" element={<SingleProduct />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/playground" element={<PlayGround />} />
         </Routes>
       </Header>

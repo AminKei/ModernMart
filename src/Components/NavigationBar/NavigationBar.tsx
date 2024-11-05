@@ -6,7 +6,7 @@ const NavigationBar = () => {
       <div className="nav-item" onClick={() => (document.location = "/")}>
         <img src={`${process.env.PUBLIC_URL}/icons/home.png`} />
       </div>
-      <div className="nav-item">
+      <div className="nav-item"  onClick={() => (document.location = "/cart")}>
         <div className="cart-icon">
           <img src={`${process.env.PUBLIC_URL}/icons/Frame.png`} />
           <span className="cart-count">2</span>
