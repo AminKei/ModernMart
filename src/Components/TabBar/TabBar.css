@@ -1,0 +1,22 @@
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  color: white;
+}
+
+.tab-button {
+  color: white;
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 12px;
+  /* border-right:  solid 1px rgb(99, 99, 99); */
+}
+
+.tab-content {
+  padding: 10px;
+}

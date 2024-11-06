@@ -5,8 +5,7 @@ import "./playGround.css";
 const PlayGround = () => {
   return (
     <div >
-      {/* <NewArrival/> */}
-      <CountDown targetDate="2025-3-10"/>
+      <NewArrival/>
     </div>
   );
 };

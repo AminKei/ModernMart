@@ -1,0 +1,13 @@
+.tabbar-mobile-view{
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .tabbar-mobile-view{
+        display: block;
+    }
+    .sidebar-other-view{
+        display: none;
+    }
+}
