@@ -5,7 +5,6 @@ import "./Register.css";
 const Register = () => {
   return (
     <>
-      <p>Back</p>
       <div className="div-root-container">
         <div className="div-container-login">
           <h1 style={{ textAlign: "center" }}> Regester Now 👋</h1>

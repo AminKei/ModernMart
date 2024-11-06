@@ -50,7 +50,8 @@ const SingleProduct = () => {
         </div>
       </div>
 
-      <div style={{ marginTop: "30vh", marginBottom: "15vh" }}>
+      <div style={{ marginTop: "20vh", marginBottom: "15vh" }}>
+        <hr />
         <LatestProducts />
       </div>
       <Footer />

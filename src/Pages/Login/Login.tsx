@@ -5,7 +5,6 @@ import "./Login.css";
 const Login = () => {
   return (
     <>
-      <p>Back</p>
       <div className="div-root-container">
         <div className="div-container-login">
           <h1 style={{ textAlign: "center" }}>Login Now 👋</h1>
