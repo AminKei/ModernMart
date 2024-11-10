@@ -22,7 +22,7 @@ const tabs = [
 ];
 
 const Orders = () => {
-  return <TabBar tabs={tabs} />;
+  return <TabBar tabs={tabs} ThemSho="grid" />;
 };
 
 export default Orders;

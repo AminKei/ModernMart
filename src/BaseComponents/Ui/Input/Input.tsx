@@ -32,8 +32,8 @@ const Input: React.FC<PropsInput> = (props) => {
       style={{
         border: "solid 1px white",
         background: "transparent",
-        padding: "10px 0px",
-        width: width || "100%",
+        padding: "10px 0px 10px 10px",
+        // width: width || "100%",
         borderRadius: "5px",
         height: heigth || "25px",
         color:  color || "white",

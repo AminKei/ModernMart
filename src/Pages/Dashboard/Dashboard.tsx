@@ -3,41 +3,25 @@ import Orders from "../../Components/OverviewDashbord/Orders/Orders";
 import SideBar from "../../Components/SideBar/SideBar";
 import TabBar from "../../Components/TabBar/TabBar";
 import "./Dashboard.css";
-
-const sidebarItems = [
-  { label: "Orders", link: "/orders" },
-  { label: "Favorites", link: "/favorites" },
-  { label: "Addresses", link: "/addresses" },
-  { label: "Information User", link: "/user-info" },
-];
+import Favorites from "../../Components/OverviewDashbord/Favorites/Favorites";
+import Addresses from "../../Components/OverviewDashbord/Addresses/Addresses";
 
 const tabs = [
   {
     name: "Orders",
-    // content: <div>Hello and welcome to home page</div>,
+    content: <Orders />,
   },
   {
     name: "Favorites",
-    // content: <div>This is your profile.</div>,
+    content: <Favorites />,
   },
   {
     name: "Addresses",
-    // content: <div>Here are your settings.</div>,
+    content: <Addresses />,
   },
   {
     name: "Logout",
-    // content: <div>Here are your settings.</div>,
-  },
-];
-
-const OrderTabs = [
-  {
-    name: "Orders",
-    content: <div>Hello and welcome to home page</div>,
-  },
-  {
-    name: "Favorites",
-    content: <div>This is your profile.</div>,
+    content: <div>Here are your settings.</div>,
   },
 ];
 
@@ -49,28 +33,7 @@ const Dashboard = () => {
       <hr />
       <p style={{ color: "gray" }}>Welcome</p>
       <h3>Hector Gomez</h3>
-      {/* <div style={{width:"30%"}}>
-        <hr />
-      </div> */}
-      <div
-        style={{
-          justifyContent: "center",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        {/* <TabBar tabs={OrderTabs} /> */}
-      </div>
-      <div className="tabbar-mobile-view">
         <TabBar tabs={tabs} />
-      </div>
-      <div className="sidebar-other-view">
-        <SideBar
-          username="Json Martinez"
-          items={sidebarItems}
-          // onLogout={handleLogout}
-        />
-      </div>
     </div>
   );
 };

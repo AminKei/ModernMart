@@ -1,6 +1,13 @@
 .tab-bar {
-  display: flex;
-  border-bottom: 1px solid #ccc;
+  display: grid;
+  float: left;
+  width: 15%;
+  height: 70vh;
+  line-height: 20px;
+  gap: 30px;
+  text-align: left;
+  justify-content: start;
+  /* align-items: center; */
   color: white;
 }
 
@@ -14,9 +21,26 @@
   font-weight: bold;
   transition: background-color 0.3s;
   font-size: 12px;
-  /* border-right:  solid 1px rgb(99, 99, 99); */
 }
 
 .tab-content {
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .tab-bar {
+    width: 100%;
+    height: 100%;
+    border-right: none;
+    display: flex;
+    border-bottom: white solid 1px;
+    padding: 10px;
+    border-right:  none;
+  }
+  .tab-button {
+    font-size: 10px;
+  }
+  .tab-content {
+    font-size: 10px;
+  }
 }
