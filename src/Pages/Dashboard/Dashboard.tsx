@@ -26,14 +26,13 @@ const tabs = [
 ];
 
 const Dashboard = () => {
-  // const routeElements = useRoutes(routes);
   return (
     <div>
       <h2>Your Dashbord</h2>
       <hr />
       <p style={{ color: "gray" }}>Welcome</p>
       <h3>Hector Gomez</h3>
-        <TabBar tabs={tabs} />
+      <TabBar tabs={tabs} />
     </div>
   );
 };

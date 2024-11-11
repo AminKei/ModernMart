@@ -81,9 +81,9 @@ const Cart = () => {
                 <div className="div-btn-cart">
                   <h3>Price: ${item.price}</h3>
                   <div className="div-btn-cart-quantity">
-                    <Button>-</Button>
-                    <h1>1 </h1>
-                    <Button>+</Button>
+                    <Button width={50} height={40}>-</Button>
+                    <h1 >1 </h1>
+                    <Button width={50} height={40}>+</Button>
                   </div>
                   <img
                     src={`${process.env.PUBLIC_URL}/icons/trash.png`}

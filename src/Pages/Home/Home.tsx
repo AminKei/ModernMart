@@ -22,11 +22,11 @@ const Home = () => {
       <hr />
       {/* <AdsPost /> */}
 
-      <Comments/>
-      {/* <NewArrival/> */}
-      <hr />
-      <LatestProducts />
-      <hr />
+      {/* <Comments/> */}
+      {/* <NewArm rival/> */}
+      {/* <hr /> */}
+      {/* <LatestProducts /> */}
+      {/* <hr /> */}
       <Features />
       <Footer />
     </>
