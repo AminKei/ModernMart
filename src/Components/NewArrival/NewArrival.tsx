@@ -24,9 +24,9 @@ import "./NewArrival.css";
 
 const NewArrival = () => {
   return (
-      <>
-        
-      </>
+    <div className="new-arrival-container">
+      <video src={`${process.env.PUBLIC_URL}/images/4.mp4`} autoPlay controls></video>
+    </div>
   );
 };
 

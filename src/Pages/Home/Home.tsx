@@ -16,7 +16,7 @@ const Home = () => {
     <>
       <AppBar />
       <HomeFirstLeyout />
-      {/* <CategorySlide/> */}
+      <CategorySlide/>
       <hr />
       <LatestProducts />
       <hr />

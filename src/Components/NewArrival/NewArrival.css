@@ -1,0 +1,12 @@
+.new-arrival-container{
+    position: relative;
+    display: flex;
+    border-radius: 30px;
+    width: 90vw;
+    height: 90vh;
+}
+.new-arrival-container video {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}

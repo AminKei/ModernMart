@@ -23,7 +23,7 @@ const SingleProduct = () => {
       <div className="root-container-single-product">
         <div className="div-image-single">
           <img
-            src={`${process.env.PUBLIC_URL}/images/image-single.png`}
+            src={`${process.env.PUBLIC_URL}/images/image-sinnpmgle.png`}
             alt="Nike Shoes for men"
           />
         </div>

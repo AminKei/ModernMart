@@ -6,13 +6,18 @@
 }
 .title {
   text-align: center;
-  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translate(10%);
+  width: 80%;
+  margin-top: -1vh;
   font-size: 50px;
   z-index: 10;
   border-radius: 100%;
   background-color: black;
   box-shadow: 10px 0px 100px 100px rgb(0, 0, 0);
-font-family: Josefin Sans;
 }
 .center-image {
   z-index: 0;
@@ -46,6 +51,9 @@ font-family: Josefin Sans;
     font-size: 20px;
     margin-top: 5vh;
     font-size: 40px;
+    width: 100%;
+    left: 0;
+    transform: translate(0);
   }
   .center-image {
     width: 100%;
