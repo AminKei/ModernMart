@@ -1,49 +1,41 @@
 /* Sidebar.css */
 .sidebar {
-    color: white;
-    width: 250px;
-    height: 73vh;
-    padding: 0px 20px 0px 20px;
-    border-right: solid 2px white;
-    margin-top: 4vh;
-    transition: width 0.3s;
-  }
-  
-  .sidebar-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar-item {
-    margin: 20px 0;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sidebar-item a,
-  .sidebar-item span {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.2s;
-  }
-  
-  .sidebar-item-logout {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    justify-content: space-between;
-    gap: 150px;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
+  color: white;
+  width: 250px;
+  height: 78vh;
+  padding: 0px 20px 0px 0px;
+  border-right: solid 2px white;
+  margin-top: 4vh;
+  transition: width 0.3s;
+  cursor: pointer;
+}
 
-  }
-  @media (max-width: 480px) {
-  
-  }
-  
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  margin: 20px 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-item a,
+.sidebar-item span {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.sidebar-item-logout {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: space-between;
+  gap: 150px;
+}

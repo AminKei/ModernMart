@@ -1,12 +1,13 @@
 .tab-bar {
   display: flex;
-  float: left;
+  /* float: left; */
   line-height: 20px;
   gap: 30px;
-  text-align: left;
+  /* text-align: left; */
   align-items: center;
   border-bottom: white 1px solid;
   padding: 10px 20px 10px 10px;
+  width: 100%;
 }
 
 .tab-button {
@@ -19,15 +20,16 @@
   font-weight: bold;
   transition: background-color 0.3s;
   font-size: 12px;
-  display: grid;
 }
 
 .tab-content {
-  justify-content: space-between;
   padding: 10px;
-  justify-content: start;
   align-items: center;
   color: white;
+  float: right;
+  position: absolute;
+  left: 350px;
+  top: 130px;
 }
 
 @media only screen and (max-width: 600px) {

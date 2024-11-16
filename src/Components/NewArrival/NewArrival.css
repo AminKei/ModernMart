@@ -1,12 +1,81 @@
-.new-arrival-container{
-    position: relative;
-    display: flex;
-    border-radius: 30px;
-    width: 90vw;
-    height: 90vh;
+.Home-leyout-container {
+  position: relative;
+  display: flex;
+  border-radius: 30px;
+  width: 100%;
+  height: 90vh;
 }
-.new-arrival-container video {
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
+.img-conteinered {
+  /* width: 130vw; */
+  height: 90vh;
+  border-radius: 30px;
+  /* transform: rotate(180deg); */
+}
+.Home-leyout-container img {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.div-bottom-home {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  /* gap: 20px; */
+}
+.div-bottom-home h1 {
+  font-size: 100px;
+  /* background-color: black; */
+}
+
+.div-right-home {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.div-shild1 {
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  padding: 20px;
+  width: 250px;
+  height: 160px;
+  border: rgb(0, 0, 0) solid 6px;
+  margin-top: 2vh;
+}
+
+.div-shild2 {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 250px;
+  height: 240px;
+  border: white solid 5px;
+}
+.div-shild2 p {
+  color: gray;
+}
+
+@media only screen and (max-width: 900px) {
+  .new-arrival-container {
+    height: 80vh;
+  }
+  .div-bottom-home h1 {
+    font-size: 20px;
+  }
+  .div-shild2 {
+    width: 140px;
+    height: 160px;
+    font-size: 10px;
+  }
+  .div-shild1{
+    width: 140px;
+    height: 90px;
+    font-size: 10px;
+  }
 }

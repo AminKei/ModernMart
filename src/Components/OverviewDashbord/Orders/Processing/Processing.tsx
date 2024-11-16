@@ -1,7 +1,7 @@
 const Processing = () => {
   return (
     <div>
-      <h1>Processing</h1>
+      <h3>Processing</h3>
     </div>
   );
 };

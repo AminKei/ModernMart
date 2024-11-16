@@ -39,7 +39,7 @@
   font-size: 10px;
   position: relative;
   text-align: center;
-  border: solid 2px white;
+  /* border: solid 2px white; */
 }
 .swiper-container .item-cate {
   height: 100%;
