@@ -1,4 +1,5 @@
 import Button from "../../BaseComponents/Ui/Button/Button";
+import ItemProduct from "../../BaseComponents/Ui/ItemProduct/ItemProduct";
 import "./Cart.css";
 
 const productsCart = [
@@ -70,27 +71,16 @@ const Cart = () => {
         <div className="conteiner-items">
           {productsCart.map((item, key) => {
             return (
-              <div className="item-product-cart" key={key}>
-                <div className="image-title-cart">
-                  <img src={item.image} width={150} alt="" />
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.caption}</p>
-                  </div>
-                </div>
-                <div className="div-btn-cart">
-                  <h3>Price: ${item.price}</h3>
-                  <div className="div-btn-cart-quantity">
-                    <Button width={50} height={40}>-</Button>
-                    <h1 >1 </h1>
-                    <Button width={50} height={40}>+</Button>
-                  </div>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/icons/trash.png`}
-                    className="trash-icon"
-                  />
-                </div>
-              </div>
+              <ItemProduct
+                description={item.caption}
+                image={item.image}
+                price={item.price}
+                title={item.title}
+                onDecrease={() => alert("-")}
+                onDelete={() => alert("-")}
+                onIncrease={() => alert("-")}
+                quantity={1}
+              />
             );
           })}
         </div>

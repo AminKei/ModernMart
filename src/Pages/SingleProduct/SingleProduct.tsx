@@ -34,7 +34,7 @@ const SingleProduct = () => {
             <h1>$1,299</h1>
             <p style={{ color: "gray" }}>107293</p>
           </div>
-          <div>
+          <div className="nots-single">
             <p>Relaxed fit</p>
             <p>Drop shoulder sleeves</p>
             <p>Elasticated neckline, hemline and cuffs</p>

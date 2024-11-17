@@ -15,6 +15,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Cart from "./Pages/Cart/Cart";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import AppBar from "./Components/AppBar/AppBar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -25,6 +26,7 @@ root.render(
     <Router>
       <Header>
         <NavigationBar />
+        {/* <AppBar/> */}
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/singleproduct" element={<SingleProduct />} />

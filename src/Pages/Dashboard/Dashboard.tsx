@@ -1,8 +1,8 @@
 import Orders from "../../Components/OverviewDashbord/Orders/Orders";
-import SideBar from "../../Components/SideBar/SideBar";
 import "./Dashboard.css";
 import Favorites from "../../Components/OverviewDashbord/Favorites/Favorites";
 import Addresses from "../../Components/OverviewDashbord/Addresses/Addresses";
+import TabBar from "../../Components/TabBar/TabBar";
 
 const tabs = [
   {
@@ -19,16 +19,18 @@ const tabs = [
   },
   {
     name: "Information",
+    content: <Addresses />,
   },
 ];
 
 const Dashboard = () => {
   return (
-    <div >
+    <div>
       <h2>Your Dashbord</h2>
       <hr />
       <p style={{ color: "gray" }}>Welcome</p>
-      <SideBar username="Hector Gomez" items={tabs} />
+      <p>Hector Martinez</p>
+      <TabBar tabs={tabs} />
     </div>
   );
 };
