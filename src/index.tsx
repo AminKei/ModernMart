@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
-import PlayGround from "./Tests/Components/PlayGround";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -16,6 +15,7 @@ import Register from "./Pages/Register/Register";
 import Cart from "./Pages/Cart/Cart";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import AppBar from "./Components/AppBar/AppBar";
+import PlayGround from "./Tests/Components/PlayGround";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -26,7 +26,7 @@ root.render(
     <Router>
       <Header>
         <NavigationBar />
-        {/* <AppBar/> */}
+        <AppBar />
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/singleproduct" element={<SingleProduct />} />

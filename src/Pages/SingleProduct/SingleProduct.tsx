@@ -17,9 +17,6 @@ const SingleProduct = () => {
 
   return (
     <>
-      <p style={{ cursor: "pointer" }} onClick={handleBackClick}>
-        Back
-      </p>
       <div className="root-container-single-product">
         <div className="div-image-single">
           <img
@@ -41,7 +38,7 @@ const SingleProduct = () => {
             <p>Made in Russia</p>
           </div>
           <SizeElement sizes={["XS", "S", "M"]} label="Size" />
-          <LikeElement/>
+          <LikeElement />
           <div>
             <Button width={330} height={50}>
               Add To Cart

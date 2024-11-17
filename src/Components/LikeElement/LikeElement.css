@@ -7,7 +7,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  color: white;
+  background-color: transparent;
 }
 
 .heart-icon {
