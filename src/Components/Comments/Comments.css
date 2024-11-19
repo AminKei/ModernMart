@@ -1,64 +1,19 @@
-.comments-container {
-  color: rgb(156, 156, 156);
-  padding: 30px;
-  border-radius: 10px;
+.comment-contiener{
+    align-content: center;
+    margin: 12vh;
 }
 
-.comments-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.div-titles-commenets{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-bottom: 4vh;
 }
-
-.comments-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 0px;
-}
-
-.comment-card {
-  border-radius: 10px;
-  width: 430px;
-  height: 185px;
-  padding: 20px;
-  border: solid 1px #818181;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.comment-card p {
-  font-size: 12px;
-}
-
-.comment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.rating {
-  color: gold;
-  font-size: 12px;
-}
-
-.see-more {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.see-more:hover {
-  text-decoration: underline;
-}
-.text-comments-top {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  margin-bottom: 2vh;
-}
-@media only screen and (max-width: 745px) {
-  .text-comments-top p {
-    font-size: 3px;
-  }
+@media only screen and (max-width:900px) {
+    .comment-contiener{
+        margin: 0;
+    }
+    .div-titles-commenets{
+        font-size: 10px;
+    }
 }

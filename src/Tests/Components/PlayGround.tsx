@@ -1,3 +1,4 @@
+import Comments from "../../Components/Comments/Comments";
 import NewArrival from "../../Components/NewArrival/NewArrival";
 import "./playGround.css";
 
@@ -5,7 +6,7 @@ import "./playGround.css";
 const PlayGround  = () => {
   return (
     <div>
-      <NewArrival />
+      <Comments/>
     </div>
   );
 };

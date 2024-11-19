@@ -1,5 +1,6 @@
 import React from "react";
 import "./ItemProduct.css";
+import Button from "../Button/Button";
 
 interface ProductCardProps {
   image?: string;
@@ -40,12 +41,41 @@ const ItemProduct: React.FC<ProductCardProps> = ({
       >
         <div className="product-price"> Price: ${price}</div>
         <div className="quantity-controls">
-          <button onClick={onDecrease}>-</button>
+          <Button
+            bgColor="#000"
+            color="white"
+            border="solid 1px white"
+            width={50}
+            onClick={onDecrease}
+          >
+            -
+          </Button>
           <span> {quantity}</span>
-          <button onClick={onIncrease}>+</button>
-          <button className="delete-button" onClick={onDelete}>
-            &#10006;
-          </button>
+          <Button
+            width={50}
+            onClick={onIncrease}
+            bgColor="#000"
+            color="white"
+            border="solid 1px white"
+          >
+            +
+          </Button>
+          <Button className="delete-button" width={50} onClick={onDelete} >
+            <svg
+              width="23"
+              height="23"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M3 6h18"></path>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+          </Button>
         </div>
       </div>
     </div>

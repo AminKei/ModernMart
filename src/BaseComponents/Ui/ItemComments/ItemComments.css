@@ -1,0 +1,38 @@
+/* FlavorCard.css */
+.flavor-card {
+  border-radius: 8px;
+  padding: 20px;
+  border: rgb(184, 184, 184) solid 1px;
+  border-radius: 15px;
+  color: white;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.flavor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  font-size: 1em;
+  color: gold;
+}
+
+.flavor-description {
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .flavor-card {
+    max-width: 230px;
+    font-size: 12px;
+    height: 120px;
+  }
+  .flavor-description{
+    font-size: 10px;
+  }
+}

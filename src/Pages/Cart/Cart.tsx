@@ -77,8 +77,8 @@ const Cart = () => {
                 price={item.price}
                 title={item.title}
                 onDecrease={() => alert("-")}
-                onDelete={() => alert("-")}
-                onIncrease={() => alert("-")}
+                onDelete={() => alert("Deleted")}
+                onIncrease={() => alert("+")}
                 quantity={1}
               />
             );

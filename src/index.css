@@ -9,6 +9,7 @@ body {
   color: white;
   margin: 4vh;
   font-weight: bold;
+  /* cursor: none; */
 }
 
 *{
@@ -16,9 +17,10 @@ body {
 }
 
 
+
 hr{
-  color: white;
-  background-color: white;
+  color: rgb(68, 68, 68);
+  background-color: rgb(58, 58, 58);
 }
 
 
