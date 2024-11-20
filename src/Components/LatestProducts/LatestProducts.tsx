@@ -29,16 +29,16 @@ const LatestProducts = () => {
         }}
         breakpoints={{
           "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
+            slidesPerView: 2,
+            spaceBetween: 60,
           },
           "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
           "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 5,
+            spaceBetween: 50,
           },
           "@1.50": {
             slidesPerView: 4,

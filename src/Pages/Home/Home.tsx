@@ -15,16 +15,12 @@ const Home = () => {
       <hr />
       <LatestProducts />
       <hr />
-      <NewArrival/>
+      <NewArrival />
       <hr />
       <LatestProducts />
       <hr />
+      <Comments />
       <AdsPost />
-      <Comments/>
-
-      {/* <hr /> */}
-      {/* <LatestProducts /> */}
-      {/* <hr /> */}
       <Features />
       <Footer />
     </>

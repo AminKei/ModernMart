@@ -17,6 +17,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import AppBar from "./Components/AppBar/AppBar";
 import PlayGround from "./Tests/Components/PlayGround";
 import Cursor from "./BaseComponents/Ui/Cursor/Cursor";
+import ProductsList from "./Pages/ProductsList/ProductsList";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -25,12 +26,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Router>
+      <Cursor />
       <Header>
-        <Cursor/>
         <NavigationBar />
         <AppBar />
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/productslist" element={<ProductsList />} />
           <Route path="/singleproduct" element={<SingleProduct />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

@@ -12,17 +12,14 @@ body {
   /* cursor: none; */
 }
 
-*{
+* {
   /* border: red solid 4px; */
 }
 
-
-
-hr{
+hr {
   color: rgb(68, 68, 68);
   background-color: rgb(58, 58, 58);
 }
-
 
 body {
   --sb-track-color: #ffffff;

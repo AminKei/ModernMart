@@ -18,6 +18,7 @@ const HomeFirstLeyout = () => {
         <div className="overlay">
           <div className="center-button">
             <Button
+              onClick={() => (document.location = "/productslist")}
               bgColor="#000"
               color="white"
               border="solid 2px white"

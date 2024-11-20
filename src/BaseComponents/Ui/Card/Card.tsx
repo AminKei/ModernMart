@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className="card">
-        {/* <p className="gold-star">&#9733;</p> */}
+      {/* <p className="gold-star">&#9733;</p> */}
       <img src={imageUrl} alt={title} className="card-image" />
       <h2 className="card-title">{title}</h2>
       <p className="card-description">{description}</p>
