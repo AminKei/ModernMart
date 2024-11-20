@@ -16,7 +16,6 @@ import Cart from "./Pages/Cart/Cart";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import AppBar from "./Components/AppBar/AppBar";
 import PlayGround from "./Tests/Components/PlayGround";
-import Cursor from "./BaseComponents/Ui/Cursor/Cursor";
 import ProductsList from "./Pages/ProductsList/ProductsList";
 
 const root = ReactDOM.createRoot(
@@ -26,7 +25,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Router>
-      <Cursor />
       <Header>
         <NavigationBar />
         <AppBar />

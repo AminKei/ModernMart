@@ -2,8 +2,16 @@ import { useState } from "react";
 import Button from "../../BaseComponents/Ui/Button/Button";
 import CountDown from "../../Components/CountDown/CountDown";
 import "./ProductsList.css";
-import SortModal from "../../Components/SortModal/SortModal";
+import SortModal from "../../Components/ProductOrganizer/SortProducts/SortModal";
 import Card from "../../BaseComponents/Ui/Card/Card";
+import FilterProducts from "../../Components/ProductOrganizer/FilterProducts/FilterProducts";
+import ToggleSwitch from "../../BaseComponents/Ui/ToggleSwitch/ToggleSwitch";
+import Range from "../../BaseComponents/Ui/Range/Range";
+import Dropdown from "../../BaseComponents/Ui/Dropdown/Dropdown";
+import Modal from "../../Components/FilterModal/Modal";
+
+const options = ["Area 1", "Area 2", "Area 3", "Any area"];
+
 const ProductsList = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [sortOption, setSortOption] = useState("Featured");
@@ -18,8 +26,12 @@ const ProductsList = () => {
 
   const handleSortSelect = (option: string) => {
     setSortOption(option);
-    // Implement any additional sorting logic here
   };
+
+  const [modalOpen2, setModalOpen2] = useState(false);
+
+  const openModal2 = () => setModalOpen2(true);
+  const closeModal2 = () => setModalOpen2(false);
 
   return (
     <div>
@@ -27,34 +39,47 @@ const ProductsList = () => {
         <h2>Buy the discount you have it</h2>
         <CountDown targetDate="2024-11-31T23:59:59" />
       </div>
-      <h4>Found 376 - results for Nike</h4>
 
       {/* filter & sort */}
+      {/* filter */}
+
       <div className="products-list-sort-filter">
-        <Button
-          width={300}
-          bgColor="#000"
-          color="white"
-          border="solid 1px white"
-        >
-          Filter
-        </Button>
+        <h4>Found 376 - results for Nike</h4>
+        <div className="div-filter-mobile-view">
+          <Button
+            onClick={openModal2}
+            width={200}
+            bgColor="#000"
+            color="white"
+            border="solid 1px white"
+          >
+            Filter
+          </Button>
+          <Modal isOpen={modalOpen2} onClose={closeModal2} title="Filter bg">
+            <div style={{ width:"300px"  }}>
+              <FilterProducts />
+            </div>
+          </Modal>
+        </div>
+        {/* sort */}
         <Button
           onClick={handleSortClick}
-          width={300}
+          width={200}
           bgColor="#000"
           color="white"
           border="solid 1px white"
         >
           Sort by {sortOption} ▼
         </Button>
-        <SortModal
+        <Modal
           isOpen={isModalOpen}
           onClose={handleCloseModal}
-          onSortSelect={handleSortSelect}
-        />
+          title="Sort By :"
+        >
+          <p>Expensive</p>
+        </Modal>
       </div>
-      
+
       {/* products lis */}
       <div className="products-list-container">
         {Array.from({ length: 10 }).map((item, key) => (
@@ -66,6 +91,9 @@ const ProductsList = () => {
             price={160}
           />
         ))}
+      </div>
+      <div className="div-filter-conteiner">
+        <FilterProducts />
       </div>
     </div>
   );

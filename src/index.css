@@ -19,6 +19,7 @@ body {
 hr {
   color: rgb(68, 68, 68);
   background-color: rgb(58, 58, 58);
+  /* width: 100%; */
 }
 
 body {
