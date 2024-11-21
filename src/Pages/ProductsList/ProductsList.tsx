@@ -9,8 +9,11 @@ import ToggleSwitch from "../../BaseComponents/Ui/ToggleSwitch/ToggleSwitch";
 import Range from "../../BaseComponents/Ui/Range/Range";
 import Dropdown from "../../BaseComponents/Ui/Dropdown/Dropdown";
 import Modal from "../../Components/FilterModal/Modal";
+import Footer from "../../Components/Footer/Footer";
+import Pagination from "../../Components/Pagination/Pagination";
 
 const options = ["Area 1", "Area 2", "Area 3", "Any area"];
+const sortoption = ["More Buy", "More See", "Chipper", "More Expensive"];
 
 const ProductsList = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -24,14 +27,13 @@ const ProductsList = () => {
     setModalOpen(false);
   };
 
-  const handleSortSelect = (option: string) => {
-    setSortOption(option);
-  };
-
   const [modalOpen2, setModalOpen2] = useState(false);
 
   const openModal2 = () => setModalOpen2(true);
   const closeModal2 = () => setModalOpen2(false);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 10; // Define total pages
 
   return (
     <div>
@@ -46,6 +48,7 @@ const ProductsList = () => {
       <div className="products-list-sort-filter">
         <h4>Found 376 - results for Nike</h4>
         <div className="div-filter-mobile-view">
+          {/* <Dropdown  label="Sort By:" options={sortoption}/> */}
           <Button
             onClick={openModal2}
             width={200}
@@ -56,35 +59,20 @@ const ProductsList = () => {
             Filter
           </Button>
           <Modal isOpen={modalOpen2} onClose={closeModal2} title="Filter bg">
-            <div style={{ width:"300px"  }}>
+            <div style={{ width: "300px" }}>
               <FilterProducts />
             </div>
           </Modal>
         </div>
         {/* sort */}
-        <Button
-          onClick={handleSortClick}
-          width={200}
-          bgColor="#000"
-          color="white"
-          border="solid 1px white"
-        >
-          Sort by {sortOption} ▼
-        </Button>
-        <Modal
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-          title="Sort By :"
-        >
-          <p>Expensive</p>
-        </Modal>
+        <Dropdown label="Sort By:" options={sortoption} />
       </div>
 
       {/* products lis */}
       <div className="products-list-container">
-        {Array.from({ length: 10 }).map((item, key) => (
+        {Array.from({ length: 12 }).map((item, key) => (
           <Card
-            imageUrl={`${process.env.PUBLIC_URL}/images/product.png`}
+            imageUrl={`${process.env.PUBLIC_URL}/images/1.png`}
             title="Morning Set"
             description="Set of coffee and chocolate cookies as a top tier among our customers and a perfect way to start your day."
             // options={}
@@ -95,6 +83,13 @@ const ProductsList = () => {
       <div className="div-filter-conteiner">
         <FilterProducts />
       </div>
+        
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
+      <Footer />
     </div>
   );
 };

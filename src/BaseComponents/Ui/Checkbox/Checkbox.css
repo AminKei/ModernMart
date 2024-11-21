@@ -1,36 +1,36 @@
-.custom-checkbox {  
-    display: flex;  
-    align-items: center;  
-    cursor: pointer;  
-    margin-top: 1vh;
-}  
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1vh;
+}
 
-.checkbox-input {  
-    display: none;  
-}  
+.checkbox-input {
+  display: none;
+}
 
-.checkbox-box {  
-    width: 24px; /* Adjust size as needed */  
-    height: 24px; /* Adjust size as needed */  
-    border: 2px solid #f0f0f0; /* Border color */  
-    border-radius: 4px; /* Rounded corners */  
-    margin-right: 8px; /* Spacing between box and label */  
-    position: relative;  
-}  
+.checkbox-box {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+}
 
-.checkbox-input:checked + .checkbox-box {  
-    background-color: #ffffff; /* Background when checked */  
-    border-color: #f7f7f7; /* Border color when checked */  
-}  
+.checkbox-input:checked + .checkbox-box {
+  background-color: #ffffff;
+  border-color: #f7f7f7;
+}
 
-.checkbox-input:checked + .checkbox-box:after {  
-    content: '';  
-    position: absolute;  
-    left: 8px; /* Position checkmark */  
-    top: 1px; /* Position checkmark */  
-    width: 8px; /* Checkmark size */  
-    height: 14px; /* Checkmark size */  
-    border: solid #000000; /* Checkmark color */  
-    border-width: 0 2px 2px 0; /* Checkmark shape */  
-    transform: rotate(45deg); /* Rotate to form checkmark */  
+.checkbox-input:checked + .checkbox-box:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 1px;
+  width: 8px;
+  height: 14px;
+  border: solid #000000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }

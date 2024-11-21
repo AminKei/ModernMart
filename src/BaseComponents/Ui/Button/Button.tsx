@@ -52,7 +52,6 @@ const Button: React.FC<ButtonProps> = (props) => {
         bottom: bottom,
         position: position,
         fontWeight: "bold",
-        
       }}
       onClick={onClick}
       className={className}

@@ -47,7 +47,7 @@
   }
   .div-container-login {
     width: 100%; /* Increase width for small devices */
-    margin-top: -7vh;
+    /* margin-top: 7vh; */
   }
 }
 

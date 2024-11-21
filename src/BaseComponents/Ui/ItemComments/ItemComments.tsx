@@ -7,11 +7,7 @@ interface FlavorCardProps {
   text: string;
 }
 
-const ItemComments: React.FC<FlavorCardProps> = ({
-  name,
-  rating,
-  text,
-}) => {
+const ItemComments: React.FC<FlavorCardProps> = ({ name, rating, text }) => {
   return (
     <div className="flavor-card">
       <div className="flavor-card-header">

@@ -21,7 +21,14 @@ const SearchBar = () => {
   };
 
   return (
-    <div style={{position:"absolute", right:"30px", display:'flex', top:"50px"}}>
+    <div
+      style={{
+        position: "absolute",
+        right: "30px",
+        display: "flex",
+        top: "50px",
+      }}
+    >
       {!isOpen && ( // Only render the button if the modal is not open
         <img
           onClick={toggleModal}
@@ -30,19 +37,21 @@ const SearchBar = () => {
         />
       )}
       {isOpen && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <img
-              src={`${process.env.PUBLIC_URL}/icons/search-black.png`}
-              alt=""
-            />
-            <Input
-              color="black"
-              value={searchTerm}
-              onChange={handleSearchChange}
-              placeholder="Type your search here..."
-              className="search-input"
-            />
+        <div className="modal-overlay2">
+          <div className="modal2">
+            <div style={{alignItems:"center", display:'flex', justifyContent:'center'}}>
+              <img
+                src={`${process.env.PUBLIC_URL}/icons/search-black.png`}
+                alt=""
+              />
+              <Input
+                color="black"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                placeholder="Type your search here..."
+                className="search-input"
+              />
+            </div>
 
             <img
               onClick={handleCloseModal}

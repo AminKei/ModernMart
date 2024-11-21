@@ -5,12 +5,16 @@ interface ToggleSwitchProps {
   initialValue?: boolean;
   onToggle: (value: boolean) => void;
   option?: any;
+  Option1: string;
+  Option2: string;
 }
 
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
   onToggle,
   initialValue,
   option,
+  Option1,
+  Option2,
 }) => {
   const [isMonthly, setIsMonthly] = useState(initialValue);
 
@@ -20,15 +24,12 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
   };
 
   return (
-    <div className="toggle-switch" onClick={handleToggle}>
-      <div
-        className={`toggle-switch-indicator ${
-          isMonthly ? "monthly" : "yearly"
-        }`}
-      />
-      <span className={`toggle-label ${isMonthly ? { option } : { option }}`}>
-        {option}
-      </span>
+    <div>
+      <label htmlFor="filter" className="switch" aria-label="Toggle Filter">
+        <input type="checkbox" id="filter" />
+        <span /* onClick={() => setSortMode(1)} */>{Option1}</span>
+        <span /* onClick={() => setSortMode(2)} */>{Option2}</span>
+      </label>
     </div>
   );
 };

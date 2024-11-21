@@ -22,8 +22,8 @@
   cursor: pointer;
   display: "flex";
 }
-@media only screen and (max-width:1200px) {
-  .item-appbar{
+@media only screen and (max-width: 1200px) {
+  .item-appbar {
     display: none;
   }
 }

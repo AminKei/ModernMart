@@ -1,0 +1,42 @@
+/* Pagination.css */  
+.pagination {  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    width: 96%;
+    margin-bottom: 10vh;
+}  
+
+.pagination button {  
+      font-size: 15px;
+    background-color: transparent;  
+    border: none;  
+    color: white;  
+    padding: 10px;  
+    cursor: pointer;  
+    transition: color 0.3s ease;  
+  }  
+  
+  .pagination button.active {  
+    background-color: white;  
+    color: black;  
+    border-radius: 5px;  
+  }  
+  
+  .pagination button:disabled {  
+    color: gray;  
+    cursor: not-allowed;  
+  }  
+  
+  .pagination span {  
+    color: white;  
+    padding: 10px;  
+  }
+
+  @media only screen and (max-width:900px) {
+    .pagination{
+        width: 90%;
+    }
+  }

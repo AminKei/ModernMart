@@ -29,7 +29,7 @@ const NewArrival = () => {
 
         <div className="grid-item">
           <img
-            src="https://img.freepik.com/free-photo/young-woman-jacket-walking-out-city_1303-25135.jpg?t=st=1732011715~exp=1732015315~hmac=9adcfd44457fa5ccebcdfdf3ddab8adf199d08287bbbed79b35d3fa54baddc9f&w=1380  "
+            src={`${process.env.PUBLIC_URL}/images/4.png`}
             alt="Model 4"
           />
           <div className="detels-item">
@@ -40,7 +40,7 @@ const NewArrival = () => {
         </div>
         <div className="grid-item">
           <img
-            src="https://img.freepik.com/free-photo/handsome-businesman-summer-city_1157-25613.jpg?t=st=1732025345~exp=1732028945~hmac=b581b82e8cf7b774433e1161fd6674e6f23b9bfb247c32c5643e1765bf60c814&w=1380"
+            src={`${process.env.PUBLIC_URL}/images/1.jpg`}
             alt="Model 5"
           />
           <div className="detels-item">

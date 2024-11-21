@@ -1,4 +1,4 @@
-.modal-overlay {  
+.modal-overlay2 {  
   position: absolute; /* در حالت دسکتاپ */  
   right: 30px; /* فاصله از سمت راست */  
   width: 500px; /* عرض در حالت دسکتاپ */  
@@ -6,7 +6,7 @@
 }  
 
 @media only screen and (max-width: 700px) {  
-  .modal-overlay {  
+  .modal-overlay2 {  
     position: fixed; /* در حالت موبایل */  
     top: 20px; /* فاصله از بالا */  
     left: 50%; /* مرکز افقی */  
@@ -16,7 +16,7 @@
   }  
 }  
 
-.modal {  
+.modal2 {  
   background-color: white;  
   display: flex;  
   align-items: center;  

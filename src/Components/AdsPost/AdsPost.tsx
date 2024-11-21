@@ -4,7 +4,6 @@ const AdsPost = () => {
   return (
     <div className="Home-leyout-container">
       <img
-        // src={`${process.env.PUBLIC_URL}/images/home.png`}
         src="https://cdn.dribbble.com/users/702789/screenshots/14756278/media/fbb76b1ba34cd605cb2ca17c3eed0ec8.png"
         className="img-conteinered"
       />
@@ -14,7 +13,7 @@ const AdsPost = () => {
           <h2>Galliz Silvers</h2>
           <p>ampid your smail with our personality glizz</p>
           <h1>$430.00</h1>
-          <Button >
+          <Button>
             <svg
               width="23"
               height="23"

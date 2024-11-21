@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import './Dropdown.css';
 interface DropdownProps {
-  options: string[];
+  options?: string[];
   label: string;
+  Childreen?: React.ReactNode;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
+const Dropdown: React.FC<DropdownProps> = ({ label, options, Childreen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -24,7 +25,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
       </div>
       {isOpen && (
         <div className="dropdown-options">
-          {options.map((option) => (
+          {options?.map((option) => (
             <div
               key={option}
               className="dropdown-option"
@@ -33,6 +34,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options }) => {
               {option}
             </div>
           ))}
+          {Childreen}
         </div>
       )}
     </div>

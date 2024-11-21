@@ -39,18 +39,27 @@ const FilterProducts = () => {
       </div>
       <div className="property-filter">
         <Dropdown options={options} label="Any area" />
-        <hr />
+        {/* <hr />e */}
         <p>Location:</p>
-        <ToggleSwitch onToggle={handleToggle} option={toggleoption} />
-        <hr />
+        <ToggleSwitch
+          onToggle={handleToggle}
+          option={toggleoption}
+          Option1="Yearly"
+          Option2="Monthly"
+        />
+        {/* <hr /> */}
         <p>Property type:</p>
-        <ToggleSwitch onToggle={handleToggle} />
-        <hr />
+        <ToggleSwitch
+          onToggle={handleToggle}
+          Option1="Residential"
+          Option2="Commercial"
+        />
+        {/* <hr /> */}
         <p>Min Price :</p>
         <Range max={100000} min={0} value={sliderValue} onChange={alert} />
         <p>Max Price :</p>
         <Range max={100000} min={0} value={sliderValue} onChange={alert} />
-        <hr />
+        {/* <hr /> */}
         <p>Filter Checked:</p>
         <Checkbox
           label="Single-Family"
@@ -72,10 +81,10 @@ const FilterProducts = () => {
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
-        <hr />
+        {/* <hr /> */}
         <p>Bathrooms:</p>
-        <SizeElement sizes={["XS", "S", "M", "XXL", "XL", "L"]} label="Size" />
-        <hr />
+        <SizeElement sizes={["XS", "XXL", "XL", "L"]} label="Size" />
+        {/* <hr /> */}
         <p>Bedrooms:</p>
         <SizeElement
           sizes={["Air conditioning", "Assisted living", "Garage"]}

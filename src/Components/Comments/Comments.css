@@ -1,19 +1,18 @@
-.comment-contiener{
-    align-content: center;
-    margin: 12vh;
+.comment-contiener {
+  align-content: center;
 }
 
-.div-titles-commenets{
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    margin-bottom: 4vh;
+.div-titles-commenets {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-bottom: 4vh;
 }
-@media only screen and (max-width:900px) {
-    .comment-contiener{
-        margin: 0;
-    }
-    .div-titles-commenets{
-        font-size: 10px;
-    }
+@media only screen and (max-width: 900px) {
+  .comment-contiener {
+    margin: 0;
+  }
+  .div-titles-commenets {
+    font-size: 10px;
+  }
 }
