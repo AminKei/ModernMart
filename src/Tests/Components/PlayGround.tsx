@@ -1,12 +1,9 @@
-import Comments from "../../Components/Comments/Comments";
-import NewArrival from "../../Components/NewArrival/NewArrival";
 import "./playGround.css";
 
-
-const PlayGround  = () => {
+const PlayGround = () => {
   return (
     <div>
-      <Comments/>
+      <p>playground test:</p>
     </div>
   );
 };

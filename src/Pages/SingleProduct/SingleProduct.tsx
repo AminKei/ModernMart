@@ -1,41 +1,47 @@
-import React from "react";
-// import { useHistory } from "react-router-dom"; // Assuming you are using react-router for navigation
 import Button from "../../BaseComponents/Ui/Button/Button";
 import "./SingleProduct.css";
 import Footer from "../../Components/Footer/Footer";
 import LatestProducts from "../../Components/LatestProducts/LatestProducts";
-import { unstable_HistoryRouter } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import SizeElement from "../../Components/SizeElement/SizeElement";
 import LikeElement from "../../Components/LikeElement/LikeElement";
+import { useProductById } from "../../Hooks/Products/useProducts";
+import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 
 const SingleProduct = () => {
-  // const history = unstable_HistoryRouter(); // For navigating back
-
   const handleBackClick = () => {
-    // history.goeBack(); // Navigate back to the previous page
+    // history.goeBack();
   };
+
+  const [searchParams] = useSearchParams();
+  const selectedId = searchParams.get("id");
+
+  const { data, error, isLoading } = useProductById(selectedId);
 
   return (
     <>
       <div className="root-container-single-product">
+        {isLoading && <Loader />}
         <div className="div-image-single">
           <img
-            src={`${process.env.PUBLIC_URL}/images/4.png`}
-            alt="Nike Shoes for men"
+            src={data?.images[0]}
+            onError={(e) => {
+              e.currentTarget.src =
+                "https://www.svgrepo.com/show/508699/landscape-placeholder.svg";
+            }}
           />
         </div>
         <div className="div-info-single">
           <div>
             <p className="new-sin">New</p>
-            <h1>Nike Shoes For Men</h1>
-            <h1>$1,299</h1>
+            <h3>{data?.title}</h3>
+            <h1>${data?.price}</h1>
             <p style={{ color: "gray" }}>107293</p>
           </div>
           <div className="nots-single">
-            <p>Relaxed fit</p>
+            <p>{data?.description}</p>
             <p>Drop shoulder sleeves</p>
             <p>Elasticated neckline, hemline and cuffs</p>
-            <p>Made in Russia</p>
           </div>
           <SizeElement sizes={["XS", "S", "M"]} label="Size" />
           <LikeElement />

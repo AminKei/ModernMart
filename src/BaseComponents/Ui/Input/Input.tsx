@@ -1,5 +1,8 @@
 import React from "react";
 
+
+type InputType = "text" | "password" | "email" | "number" | "file";
+
 interface PropsInput {
   width?: number;
   heigth?: number;
@@ -11,6 +14,7 @@ interface PropsInput {
   ref?: string;
   autoFocus?: boolean;
   color?: string;
+  type?:InputType;
 }
 
 const Input: React.FC<PropsInput> = (props) => {
@@ -24,6 +28,7 @@ const Input: React.FC<PropsInput> = (props) => {
     placeholder,
     className,
     color,
+    type
   } = props;
 
   return (
@@ -44,6 +49,7 @@ const Input: React.FC<PropsInput> = (props) => {
       value={value}
       ref={ref}
       autoFocus={autoFocus}
+      type={type}
     />
   );
 };

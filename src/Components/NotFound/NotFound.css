@@ -1,0 +1,56 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #e9e9e9;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.not-found-header {
+  font-size: 6rem;
+  margin: 0;
+  color: #ff4757;
+  animation: bounce 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.not-found-message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.not-found-link {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #ff4757;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.not-found-link:hover {
+  background-color: #ff6b81;
+}

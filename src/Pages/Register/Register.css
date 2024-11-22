@@ -5,7 +5,7 @@
   align-items: center;
   color: white;
   width: 100%;
-  margin-top: -2vh;
+  margin-top: -4vh;
 }
 
 .div-container-login {
@@ -34,6 +34,12 @@
   display: flex;
   align-items: center;
 }
+.div-container-login button {
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 1024px) {
   .div-container-login {
@@ -48,7 +54,7 @@
   }
   .div-container-login {
     width: 100%; /* Increase width for small devices */
-    margin-top: -7vh;
+    /* margin-top: -7vh; */
   }
   .discraption-log-sign {
     text-align: center;

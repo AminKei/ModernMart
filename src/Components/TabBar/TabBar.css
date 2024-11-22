@@ -11,7 +11,7 @@
 
 .tab-button {
   color: white;
-  flex: 1;
+  flex: 0;
   background: none;
   border: none;
   padding: 10px;

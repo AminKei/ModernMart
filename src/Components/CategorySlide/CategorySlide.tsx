@@ -3,13 +3,13 @@ import "./CategorySlide.css";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import TabBar from "../TabBar/TabBar";
 
 const dataCategory = [
   {
     id: 1,
     Title: "Kids Dress",
-    ImageUrl:
-      "https://img.freepik.com/premium-photo/3d-rendered-portrait-male-model-street-fashion-photography_1069963-28296.jpg",
+    ImageUrl: "https://pngimg.com/d/nike_PNG4.png",
   },
   {
     id: 2,
@@ -67,33 +67,38 @@ const dataCategory = [
   },
 ];
 
+
+
 const CategorySlide = () => {
   return (
-    <div className="category-list">
-      {dataCategory.map((category) => (
-        <div
-          key={category.id}
-          className="category-item"
-          // onClick={() => onCategorySelect(category.id)}
-          role="button" // Added role for accessibility
-          tabIndex={0} // Added tabIndex for keyboard navigation
-          onKeyPress={(e) => {
-            // Added key press event for accessibility
-            if (e.key === "Enter" || e.key === " ") {
-              // onCategorySelect(category.id);
-            }
-          }}
-        >
-          <img
-            src={category.ImageUrl}
-            alt={category.Title} // Changed from Title to title
-            className="category-image"
-          />
-          <span className="category-name">{category.Title}</span>{" "}
-          {/* Changed from Title to title */}
-        </div>
-      ))}
-    </div>
+    <>
+      
+      <div className="category-list">
+        {dataCategory.map((category) => (
+          <div
+            key={category.id}
+            className="category-item"
+            // onClick={() => onCategorySelect(category.id)}
+            role="button" // Added role for accessibility
+            tabIndex={0} // Added tabIndex for keyboard navigation
+            onKeyPress={(e) => {
+              // Added key press event for accessibility
+              if (e.key === "Enter" || e.key === " ") {
+                // onCategorySelect(category.id);
+              }
+            }}
+          >
+            <img
+              src={category.ImageUrl}
+              alt={category.Title} // Changed from Title to title
+              className="category-image"
+            />
+            <span className="category-name">{category.Title}</span>{" "}
+            {/* Changed from Title to title */}
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
