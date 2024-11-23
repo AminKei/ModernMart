@@ -8,7 +8,6 @@ interface CardProps {
   options?: string[];
   price?: number;
   onClick?: () => void;
-
 }
 
 const Card: React.FC<CardProps> = ({
@@ -17,12 +16,20 @@ const Card: React.FC<CardProps> = ({
   title,
   options,
   price,
-  onClick
+  onClick,
 }) => {
   return (
     <div className="card" onClick={onClick}>
       {/* <p className="gold-star">&#9733;</p> */}
-      <img src={imageUrl} alt={title} className="card-image" />
+      <img
+        src={imageUrl}
+        alt={title}
+        className="card-image"
+        onError={(e) => {
+          e.currentTarget.src =
+            "https://www.svgrepo.com/show/508699/landscape-placeholder.svg";
+        }}
+      />
       <h2 className="card-title">{title}</h2>
       <p className="card-description">{description}</p>
       <div className="div-button-price">

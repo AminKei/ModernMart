@@ -7,6 +7,7 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
+
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   onPageChange,
