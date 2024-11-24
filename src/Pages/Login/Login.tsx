@@ -6,6 +6,7 @@ import { useLogin } from "../../Hooks/Auth/useLogin";
 import { useEffect, useState } from "react";
 import { LoginUserBody } from "../../Models/User";
 import swal from "sweetalert";
+import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 const Login = () => {
   const { goToDashboard } = useAppNavigate();
 
@@ -47,6 +48,8 @@ const Login = () => {
   }, [isSuccess, isError]);
 
   console.log(data);
+
+ 
 
   return (
     <>
@@ -91,9 +94,12 @@ const Login = () => {
             <p
               style={{ textAlign: "center" }}
               onClick={() => (document.location = "/register")}
-            >
+              >
               Do You Not have an account? <a href="#">Sing Up now</a>
             </p>
+              {
+                isLoading && <Loader />
+              }
           </div>
         </div>
       </div>

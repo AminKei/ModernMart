@@ -6,12 +6,19 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./LatestProducts.css";
 import CountDown from "../CountDown/CountDown";
+import { useProducts } from "../../Hooks/Products/useProducts";
+import { useAppNavigate } from "../../Hooks/Navigation/useAppNavigate";
 const LatestProducts = () => {
+  const { data, error, isLoading } = useProducts();
+
+  const { goToProductDetails } = useAppNavigate();
+
   return (
     <>
       <div className="titles-top-lasted">
         <h2>
-          Don't miss the latest products! <p>See More</p>
+          Don't miss the latest products!{" "}
+          <p onClick={() => (document.location = "/productslist")}>See More</p>
         </h2>
         <CountDown targetDate="2025-3-10" />
       </div>
@@ -52,15 +59,16 @@ const LatestProducts = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {Array.from({ length: 10 }).map((_, index) => (
+        {data?.slice(0, 15).map((item, index) => (
           <SwiperSlide key={index}>
-            <div onClick={() => (document.location = "/singleproduct")}>
+            <div>
               <Card
-                imageUrl="https://clipart-library.com/images_k/shoe-transparent-background/shoe-transparent-background-12.png"
-                title="Morning Set"
-                description="Set of coffee and chocolate cookies as a top tier among our customers and a perfect way to start your day."
+                onClick={() => goToProductDetails(item.id)}
+                key={index}
+                imageUrl={item.images[0]}
+                title={item.title}
                 options={["sugar", "vanilla aroma", "cherry jam", "cinnamon"]}
-                price={125}
+                price={item.price}
               />
             </div>
           </SwiperSlide>

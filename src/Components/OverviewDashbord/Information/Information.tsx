@@ -1,9 +1,10 @@
 import Button from "../../../BaseComponents/Ui/Button/Button";
+import Loader from "../../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 import { StorageKey } from "../../../Config";
 import { useProfile } from "../../../Hooks/Auth/useProfile";
 
 const Information = () => {
-  const { data } = useProfile();
+  const { data, error, isLoading } = useProfile();
 
   const Logout = () => {
     localStorage.removeItem(StorageKey.User_Token);
@@ -12,6 +13,7 @@ const Information = () => {
   return (
     <div>
       <h3>Information :</h3>
+      {isLoading && <Loader/>}
       <div
         style={{
           display: "flex",
@@ -26,6 +28,7 @@ const Information = () => {
           height={50}
           alt=""
           style={{ borderRadius: "50%" }}
+          
         />
         <p>Name : {data?.name}</p>
       </div>

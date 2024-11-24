@@ -4,10 +4,10 @@ interface DropdownProps {
   options?: any[];
   label?: string;
   Childreen?: React.ReactNode;
-  onSelect?:(e: React.ChangeEvent<HTMLInputElement>) => void
+  onChange?:(e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ label, options, Childreen, onSelect }) => {
+const Dropdown: React.FC<DropdownProps> = ({ label, options, Childreen, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -31,13 +31,13 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options, Childreen, onSelect
               key={option}
               className="dropdown-option"
               onClick={() => handleOptionClick(option)}
-              onChange={onSelect}
+              onChange={onChange}
             >
               
               {option}
+              {Childreen}
             </div>
           ))}
-          {Childreen}
         </div>
       )}
     </div>

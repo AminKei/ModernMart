@@ -21,7 +21,7 @@ const tabs = [
 ];
 
 const Dashboard = () => {
-  const { data } = useProfile();
+  const { data, isLoading, error } = useProfile();
 
   return (
     <div>

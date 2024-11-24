@@ -1,40 +1,42 @@
-.modal-overlay2 {  
-  position: absolute; /* در حالت دسکتاپ */  
-  right: 30px; /* فاصله از سمت راست */  
-  width: 500px; /* عرض در حالت دسکتاپ */  
-  z-index: 1000;  
-}  
+.modal-overlay2 {
+  position: absolute;
+  right: 30px;
+  width: 500px;
+  z-index: 1000;
+}
 
-@media only screen and (max-width: 700px) {  
-  .modal-overlay2 {  
-    position: fixed; /* در حالت موبایل */  
-    top: 20px; /* فاصله از بالا */  
-    left: 50%; /* مرکز افقی */  
-    transform: translateX(-50%); /* جابجایی برای مرکزی کردن */  
-    width: 90%; /* عرض در حالت موبایل */  
-    max-width: 400px; /* حداکثر عرض */  
-  }  
-}  
+@media only screen and (max-width: 700px) {
+  .modal-overlay2 {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+  }
+}
 
-.modal2 {  
-  background-color: white;  
-  display: flex;  
-  align-items: center;  
-  justify-content: space-between;  
-  border-radius: 5px;  
-  gap: 2px;  
-  padding: 1px 10px;  
-}  
+.modal2 {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  gap: 2px;
+  padding: 1px 10px;
+}
 
-.result-search {  
-  display: grid;  
-  background-color: white;  
-  align-items: center;  
-  justify-content: space-between;  
-  gap: 10px;  
-  margin-top: 1vh;  
-  border-radius: 5px;  
-  color: black;  
-  padding: 10px;  
-  overflow-y: scroll;  
+.result-search {
+  display: grid;
+  background-color: black;
+  border: white solid 2px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 1vh;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  height: 500px;
+  overflow-y: scroll;
 }

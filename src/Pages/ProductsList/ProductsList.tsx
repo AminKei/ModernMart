@@ -81,13 +81,14 @@ const ProductsList = () => {
           </Modal>  
         </div>  
         <Dropdown label="Sort by" options={["More Buy", "More See", "Cheaper", "More Expensive"]} />
+          
         
-        {/* <div className="sort-buttons">  
+        <div className="sort-buttons">  
           <Button onClick={() => setSortOption("More Expensive")}>More Expensive</Button>  
           <Button onClick={() => setSortOption("Cheaper")}>Cheaper</Button>  
           <Button onClick={() => setSortOption("More Buy")}>More Buy</Button>  
           <Button onClick={() => setSortOption("More See")}>More See</Button>  
-        </div>   */}
+        </div>  
       </div>  
 
 

@@ -1,11 +1,15 @@
 import { useState } from "react";
 import "./SearchBar.css";
 import Input from "../../BaseComponents/Ui/Input/Input";
+import { useProducts } from "../../Hooks/Products/useProducts";
+import { useAppNavigate } from "../../Hooks/Navigation/useAppNavigate";
+import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 
 const SearchBar = () => {
+  const { data, error, isLoading } = useProducts();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [overview, setOverView] = useState(false);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -17,8 +21,15 @@ const SearchBar = () => {
 
   const handleCloseModal = () => {
     setIsOpen(false);
-    setSearchTerm(""); // Clear the search term on close
+    setSearchTerm("");
   };
+
+  const filteredProducts =
+    data?.filter((product) =>
+      product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    ) || [];
+
+  const { goToProductDetails } = useAppNavigate();
 
   return (
     <div
@@ -29,7 +40,7 @@ const SearchBar = () => {
         top: "50px",
       }}
     >
-      {!isOpen && ( // Only render the button if the modal is not open
+      {!isOpen && (
         <img
           onClick={toggleModal}
           src={`${process.env.PUBLIC_URL}/icons/search.png`}
@@ -39,12 +50,19 @@ const SearchBar = () => {
       {isOpen && (
         <div className="modal-overlay2">
           <div className="modal2">
-            <div style={{alignItems:"center", display:'flex', justifyContent:'center'}}>
+            <div
+              style={{
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <img
                 src={`${process.env.PUBLIC_URL}/icons/search-black.png`}
                 alt=""
               />
               <Input
+                autoFocus
                 color="black"
                 value={searchTerm}
                 onChange={handleSearchChange}
@@ -59,12 +77,25 @@ const SearchBar = () => {
               alt=""
             />
           </div>
-          {searchTerm.length > 0 && (
+          {searchTerm.length > 0 && filteredProducts.length > 0 && (
             <div className="result-search">
-              <p>Nothig</p>
-              <p>Nothig mangemant</p>
-              <p>Nothig sozuki marinos</p>
-              <p>Nothig hector gomez</p>
+              {filteredProducts.map((product) => (
+                <div
+                  key={product.id}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => goToProductDetails(product.id)}
+                >
+                  <p style={{ fontSize: "12px" }}>{product.title}</p>
+                  <p style={{ color: "gray", fontSize: "10px" }}>
+                    {product.category.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+          {searchTerm.length > 0 && filteredProducts.length === 0 && (
+            <div className="result-search">
+              <Loader />
             </div>
           )}
         </div>
