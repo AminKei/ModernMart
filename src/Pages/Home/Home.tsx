@@ -23,6 +23,7 @@ const Home = () => {
         <TabBar tabs={tabSlide} />
       </div>
       <CategorySlide />
+      <hr />
       <LatestProducts />
       <hr />
       <NewArrival />

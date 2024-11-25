@@ -1,5 +1,5 @@
 import Card from "../../BaseComponents/Ui/Card/Card";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -44,11 +44,11 @@ const LatestProducts = () => {
             spaceBetween: 30,
           },
           "@1.00": {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 50,
           },
           "@1.50": {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 50,
           },
           "@1.75": {

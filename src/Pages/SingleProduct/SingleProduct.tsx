@@ -7,6 +7,7 @@ import SizeElement from "../../Components/SizeElement/SizeElement";
 import LikeElement from "../../Components/LikeElement/LikeElement";
 import { useProductById } from "../../Hooks/Products/useProducts";
 import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
+import PlaceLoad from "../../BaseComponents/Ui/LoadTemplate/PlaceLoad/PlaceLoad";
 
 const SingleProduct = () => {
   const handleBackClick = () => {
@@ -34,13 +35,14 @@ const SingleProduct = () => {
         <div className="div-info-single">
           <div>
             <p className="new-sin">New</p>
-            <h3>{data?.title}</h3>
+            {isLoading ? <PlaceLoad /> : <h3>{data?.title}</h3>}
+
             <h1>${data?.price}</h1>
             <p style={{ color: "gray" }}>107293</p>
           </div>
           <div className="nots-single">
-            <p>{data?.description}</p>
-            <p>Drop shoulder sleeves</p>
+            {isLoading ? <PlaceLoad /> : <p>{data?.description}</p>}
+
             <p>Elasticated neckline, hemline and cuffs</p>
           </div>
           <SizeElement sizes={["XS", "S", "M"]} label="Size" />

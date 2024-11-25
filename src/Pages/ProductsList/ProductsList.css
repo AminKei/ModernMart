@@ -34,7 +34,7 @@
     display: grid;
     font-size: 10px;
   }
-  .products-list-sort-filter h4{
+  .products-list-sort-filter h4 {
     display: none;
   }
   .products-list-container {

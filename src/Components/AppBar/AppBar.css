@@ -10,6 +10,10 @@
   justify-content: space-between;
   gap: 50px;
 }
+.item-texts-appbar h4 {
+  border-left: red solid 2px;
+  padding: 5px;
+}
 
 .item-appbar {
   align-items: center;

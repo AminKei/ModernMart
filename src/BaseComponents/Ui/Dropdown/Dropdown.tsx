@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import './Dropdown.css';
+
 interface DropdownProps {
-  options?: any[];
+  options?: string[]; // Assuming options are strings
   label?: string;
-  Childreen?: React.ReactNode;
-  onChange?:(e: React.ChangeEvent<HTMLInputElement>) => void
+  children?: React.ReactNode; // Corrected the spelling
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ label, options, Childreen, onChange }) => {
+const Dropdown: React.FC<DropdownProps> = ({ label, options, children, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -31,13 +32,12 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options, Childreen, onChange
               key={option}
               className="dropdown-option"
               onClick={() => handleOptionClick(option)}
-              onChange={onChange}
             >
-              
               {option}
-              {Childreen}
             </div>
           ))}
+          {/* Render the children (tags) here */}
+          {children}
         </div>
       )}
     </div>

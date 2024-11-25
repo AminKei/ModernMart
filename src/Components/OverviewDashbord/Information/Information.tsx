@@ -1,5 +1,6 @@
 import Button from "../../../BaseComponents/Ui/Button/Button";
 import Loader from "../../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
+import PlaceLoad from "../../../BaseComponents/Ui/LoadTemplate/PlaceLoad/PlaceLoad";
 import { StorageKey } from "../../../Config";
 import { useProfile } from "../../../Hooks/Auth/useProfile";
 
@@ -13,7 +14,13 @@ const Information = () => {
   return (
     <div>
       <h3>Information :</h3>
-      {isLoading && <Loader/>}
+      <img
+          src={data?.avatar}
+          width={50}
+          height={50}
+          alt=""
+          style={{ borderRadius: "50%" }}
+        />
       <div
         style={{
           display: "flex",
@@ -22,19 +29,11 @@ const Information = () => {
           gap: "30px",
         }}
       >
-        <img
-          src={data?.avatar}
-          width={50}
-          height={50}
-          alt=""
-          style={{ borderRadius: "50%" }}
-          
-        />
-        <p>Name : {data?.name}</p>
+        {isLoading ? <PlaceLoad /> : <p> Name : {data?.name}</p>}
       </div>
-      <p>Email : {data?.email}</p>
-      <p>Password: {data?.password}</p>
-      <code>Role: {data?.role}</code>
+      {isLoading ? <PlaceLoad /> : <p>Email : {data?.email}</p>}
+      {isLoading ? <PlaceLoad /> : <p>Password: {data?.password}</p>}
+      {isLoading ? <PlaceLoad /> : <p>Role: {data?.role}</p>}
       <p>Address : Isfahan Najaf Abad Yazdanshar Bostan 19 </p>
       <Button width={300} onClick={Logout}>
         Logout
