@@ -20,7 +20,7 @@ const ProductsList = () => {
   const closeModal2 = () => setModalOpen2(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortOption, setSortOption] = useState("More Buy"); 
+  const [sortOption, setSortOption] = useState("More Buy");
   const { data, error, isLoading } = useProducts();
   const { goToProductDetails } = useAppNavigate();
 
@@ -42,13 +42,14 @@ const ProductsList = () => {
     }
   });
 
-  
   // pagination :
   const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
   const paginatedProducts = sortedProducts.slice(
     startIndex,
     startIndex + PRODUCTS_PER_PAGE
   );
+
+  
 
   return (
     <div>
@@ -78,7 +79,7 @@ const ProductsList = () => {
         </div>
 
         {/* sort component */}
-        <Dropdown label="Sort by">
+        <Dropdown label={sortOption}>
           <Button
             onClick={() => setSortOption("Cheaper")}
             bgColor="#000"

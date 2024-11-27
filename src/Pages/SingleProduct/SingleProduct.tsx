@@ -8,10 +8,18 @@ import LikeElement from "../../Components/LikeElement/LikeElement";
 import { useProductById } from "../../Hooks/Products/useProducts";
 import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 import PlaceLoad from "../../BaseComponents/Ui/LoadTemplate/PlaceLoad/PlaceLoad";
+import swal from "sweetalert";
 
 const SingleProduct = () => {
   const handleBackClick = () => {
     // history.goeBack();
+  };
+
+  const HandleAddToCart = () => {
+    swal({
+      title: "Product Added To Cart!",
+      icon: "success",
+    });
   };
 
   const [searchParams] = useSearchParams();
@@ -48,7 +56,7 @@ const SingleProduct = () => {
           <SizeElement sizes={["XS", "S", "M"]} label="Size" />
           <LikeElement />
           <div>
-            <Button width={330} height={50}>
+            <Button width={330} height={50} onClick={HandleAddToCart}>
               Add To Cart
             </Button>
           </div>

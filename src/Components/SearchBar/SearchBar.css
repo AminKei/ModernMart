@@ -2,6 +2,7 @@
   position: absolute;
   right: 30px;
   width: 500px;
+  cursor: pointer;
   z-index: 1000;
 }
 

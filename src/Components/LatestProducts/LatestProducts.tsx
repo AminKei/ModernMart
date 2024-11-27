@@ -8,6 +8,7 @@ import "./LatestProducts.css";
 import CountDown from "../CountDown/CountDown";
 import { useProducts } from "../../Hooks/Products/useProducts";
 import { useAppNavigate } from "../../Hooks/Navigation/useAppNavigate";
+import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 const LatestProducts = () => {
   const { data, error, isLoading } = useProducts();
 
@@ -73,6 +74,7 @@ const LatestProducts = () => {
             </div>
           </SwiperSlide>
         ))}
+        {isLoading && <Loader />}
       </Swiper>
     </>
   );
