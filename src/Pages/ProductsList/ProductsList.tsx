@@ -11,6 +11,7 @@ import { useProducts } from "../../Hooks/Products/useProducts";
 import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 import { useAppNavigate } from "../../Hooks/Navigation/useAppNavigate";
 import Dropdown from "../../BaseComponents/Ui/Dropdown/Dropdown";
+import { useCart } from "../../Hooks/Cart/useCart";
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -48,6 +49,7 @@ const ProductsList = () => {
     startIndex,
     startIndex + PRODUCTS_PER_PAGE
   );
+
 
   
 
