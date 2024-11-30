@@ -5,6 +5,10 @@ import "./NavigationBar.css";
 const NavigationBar = () => {
   const { data } = useProfile();
 
+
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+
   return (
     <div className="bottom-nav">
       <div className="nav-item" onClick={() => (document.location = "/")}>
@@ -13,7 +17,7 @@ const NavigationBar = () => {
       <div className="nav-item" onClick={() => (document.location = "/cart")}>
         <div className="cart-icon">
           <img src={`${process.env.PUBLIC_URL}/icons/Frame.png`} />
-          <span className="cart-count">2</span>
+          <span className="cart-count">{cart.length}</span>
         </div>
       </div>
       <div

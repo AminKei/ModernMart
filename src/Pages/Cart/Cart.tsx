@@ -2,95 +2,70 @@ import Button from "../../BaseComponents/Ui/Button/Button";
 import ItemProduct from "../../BaseComponents/Ui/ItemProduct/ItemProduct";
 import "./Cart.css";
 
-const productsCart = [
-  {
-    id: 1,
-    image:
-      "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
-    title: "Graphic cart gameing RTX 3060",
-    caption: "For all devisec and graphic designers nothing sumuels martinez",
-    price: 500,
-    quantity: 1,
-  },
-  {
-    id: 2,
-    image:
-      "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
-    title: "Graphic cart gameing RTX 4090",
-    caption: "For all devisec and graphic designers nothing sumuels martinez",
-    price: 500,
-    quantity: 1,
-  },
-  {
-    id: 3,
-    image:
-      "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
-    title: "Graphic cart gameing GTX 2050",
-    caption: "For all devisec and graphic designers nothing sumuels martinez",
-    price: 500,
-    quantity: 1,
-  },
-  {
-    id: 3,
-    image:
-      "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
-    title: "Graphic cart gameing GTX 2050",
-    caption: "For all devisec and graphic designers nothing sumuels martinez",
-    price: 500,
-    quantity: 1,
-  },
-
-  {
-    id: 3,
-    image:
-      "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
-    title: "Graphic cart gameing GTX 2050",
-    caption: "For all devisec and graphic designers nothing sumuels martinez",
-    price: 500,
-    quantity: 1,
-  },
-  {
-    id: 3,
-    image:
-      "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-4090-product-photo-001.png",
-    title: "Graphic cart gameing GTX 2050",
-    caption: "For all devisec and graphic designers nothing sumuels martinez",
-    price: 500,
-    quantity: 1,
-  },
-];
 const Cart = () => {
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+
+
+  const totalOrderPrice = cart.reduce((total: number, product: any) => {
+    if (product && product.price) {
+      return total + product.price; 
+    }
+    return total; 
+  }, 0);
+
+
+
   return (
     <div>
       <h2>Shopping Continue</h2>
       <hr />
-      {/* <h4>Shopping cart</h4> */}
-      <p>You have 3 item in your cart</p>
+      <p>You have {cart.length} items in your cart</p>
 
       <div className="root-conters">
-        <div className="conteiner-items">
-          {productsCart.map((item, key) => {
-            return (
-              <ItemProduct
-                description={item.caption}
-                image={item.image}
-                price={item.price}
-                title={item.title}
-                onDecrease={() => alert("-")}
-                onDelete={() => alert("Deleted")}
-                onIncrease={() => alert("+")}
-                quantity={1}
-              />
-            );
-          })}
-        </div>
+        {cart.length === 0 ? (
+          <p>
+            Your cart is empty{" "}
+            <a href="/productslist">return to products list</a>
+          </p>
+        ) : (
+          <div className="conteiner-items">
+            {cart.map((product: any, key: any) => {
+              if (
+                !product ||
+                !product.description ||
+                !product.images ||
+                !product.images[0] ||
+                !product.price ||
+                !product.title
+              ) {
+                console.error(`Invalid product at index ${key}:`, product);
+                return null; 
+              }
 
-        {/* checkout */}
+              return (
+                <ItemProduct
+                  key={key}
+                  description={product.description}
+                  image={product.images[0]}
+                  price={product.price}
+                  title={product.title}
+                  onDecrease={() => alert("-")}
+                  onDelete={() => alert("Deleted")}
+                  onIncrease={() => alert("+")}
+                  quantity={1} 
+                />
+              );
+            })}
+          </div>
+        )}
+
+        {/* Checkout */}
         <div className="conteiner-checkout">
           <h3>Payment details</h3>
           <div className="item-checkout">
             <h4>All Order :</h4>
-            <span>$1100.00</span>
+            <span>${totalOrderPrice.toFixed(2)}</span>
           </div>
           <div className="item-checkout">
             <h4>Delivery :</h4>
@@ -98,24 +73,24 @@ const Cart = () => {
           </div>
           <div className="item-checkout">
             <h4>Discount :</h4>
-            <span>$80.00</span>
+            <span>$10.00</span>
           </div>
           <hr />
           <div className="item-total">
             <h4>Payment :</h4>
-            <span>$1300.00</span>
+            <span>${(totalOrderPrice + 20 - 10).toFixed(2)}</span>
           </div>
           <Button height={45} className="button-checkout">
             Checkout
           </Button>
         </div>
         <div className="mobile-divces-checkout">
-          <span>$1300.00</span>
+          <span>${(totalOrderPrice + 20 - 80).toFixed(2)}</span>
           <Button height={45} className="button-checkout2">
             Checkout
           </Button>
         </div>
-        {/* checkout */}
+        {/* Checkout */}
       </div>
     </div>
   );

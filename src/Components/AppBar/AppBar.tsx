@@ -12,6 +12,7 @@ const AppBar = () => {
         </div>
       </div>
       <SearchBar />
+      
     </div>
   );
 };
