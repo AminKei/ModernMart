@@ -11,7 +11,6 @@ import TabBar from "../../Components/TabBar/TabBar";
 const tabSlide = [
   { name: "Men's" },
   { name: "Women's" },
-  { name: "Kids" },
   { name: "Accessories" },
 ];
 

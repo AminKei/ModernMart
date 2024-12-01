@@ -4,7 +4,7 @@
   border-radius: 8px;
   padding: 16px;
   margin: 10px 0;
-  width: 95%;
+  /* width: 95%; */
   color: white;
   height: 100px;
   justify-content: space-between;
@@ -18,8 +18,8 @@
 }
 
 .product-details {
-  flex: 1;
-  margin-left: 16px;
+  position: relative;
+  left: 40px;
 }
 
 .product-title {
@@ -30,7 +30,7 @@
 .product-description {
   color: #b0b0b0;
   margin: 4px 0 8px;
-  font-size:10px;
+  font-size: 10px;
 }
 
 .product-price {
@@ -69,6 +69,12 @@
   .product-description {
     display: none;
   }
+  .product-image{
+    height: 50%;
+    position: relative;
+    top: -20px;
+    width: 70%;
+  }
   .product-title {
     font-size: 8px;
     width: 100%;
@@ -76,7 +82,9 @@
     margin-left: -2vh;
   }
   .product-price {
-    font-size: 12px;
+    font-size: 11px;
+    position: relative;
+  right: -80px;
   }
   .quantity-controls {
     gap: 2px;
