@@ -5,15 +5,19 @@ import "./Cart.css";
 const Cart = () => {
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
-
-
   const totalOrderPrice = cart.reduce((total: number, product: any) => {
     if (product && product.price) {
-      return total + product.price; 
+      return total + product.price;
     }
-    return total; 
+    return total;
   }, 0);
 
+  const handleDelete = (index: number) => {
+    const updatedCart = cart.filter((_: any, i: any) => i !== index);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    // Optionally, you can trigger a re-render or state update to reflect changes
+    window.location.reload(); // Reloading the page to reflect changes
+  };
 
 
   return (
@@ -40,7 +44,7 @@ const Cart = () => {
                 !product.title
               ) {
                 console.error(`Invalid product at index ${key}:`, product);
-                return null; 
+                return null;
               }
 
               return (
@@ -50,10 +54,10 @@ const Cart = () => {
                   image={product.images[0]}
                   price={product.price}
                   title={product.title}
-                  onDecrease={() => alert("-")}
-                  onDelete={() => alert("Deleted")}
-                  onIncrease={() => alert("+")}
-                  quantity={1} 
+                  onDecrease={() => undefined}
+                  onDelete={() => handleDelete(key)}
+                  onIncrease={() => undefined}
+                  quantity={1}
                 />
               );
             })}

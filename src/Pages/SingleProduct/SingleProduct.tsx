@@ -25,6 +25,18 @@ const SingleProduct = () => {
       title: "Product Added To Cart!",
       icon: "success",
     });
+    // window.location.reload()
+  };
+
+  const addToFeivorite = (product: ProductObject) => {
+    const fav = JSON.parse(localStorage.getItem("fav") || "[]");
+    fav.push(product);
+    localStorage.setItem("fav", JSON.stringify(fav));
+    swal({
+      title: "Product Added To Favorite!",
+      icon: "success",
+    });
+    // window.location.reload()
   };
 
   
@@ -58,7 +70,7 @@ const SingleProduct = () => {
             <p>Elasticated neckline, hemline and cuffs</p>
           </div>
           <SizeElement sizes={["XS", "S", "M"]} label="Size" />
-          <LikeElement />
+          <LikeElement onClick={() => data && addToFeivorite(data as ProductObject)} />
           <div>
             <Button width={330} height={50} onClick={() => data && addToCart(data as ProductObject)}>
               Add To Cart
