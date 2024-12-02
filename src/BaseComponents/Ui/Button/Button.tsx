@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-
 type Position = "absolute" | "relative";
 type BgColor = "#000" | "#FFFFFF" | "transparent";
 
@@ -54,7 +53,7 @@ const Button: React.FC<ButtonProps> = (props) => {
         fontWeight: "bold",
       }}
       onClick={onClick}
-      className={className}
+      className={`ButtonStyle ${className}`}
     >
       {children}
     </button>
@@ -62,3 +61,5 @@ const Button: React.FC<ButtonProps> = (props) => {
 };
 
 export default Button;
+
+

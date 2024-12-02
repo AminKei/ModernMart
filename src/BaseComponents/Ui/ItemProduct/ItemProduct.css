@@ -70,24 +70,29 @@
     display: none;
   }
   .product-image{
-    height: 50%;
-    position: relative;
-    top: -20px;
-    width: 70%;
+    position: relative; 
+    width: 50%;
+    height: 100%;
   }
   .product-title {
-    font-size: 8px;
+    font-size: 10px;
+    margin-top: -4vh;
     width: 100%;
-    margin-top: -2vh;
-    margin-left: -2vh;
+    position: relative;
+    right: 20px;
+    width: 100px;
   }
   .product-price {
     font-size: 11px;
     position: relative;
-  right: -80px;
+    left: 30px;
   }
   .quantity-controls {
     gap: 2px;
-    margin-top: 4vh;
+    width: 50%;
+    position: relative;
+    left: 30px;
+    float: right;
+    margin-top: 5vh;
   }
 }

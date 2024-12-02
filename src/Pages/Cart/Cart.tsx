@@ -58,6 +58,7 @@ const Cart = () => {
                   onDelete={() => handleDelete(key)}
                   onIncrease={() => undefined}
                   quantity={1}
+                  
                 />
               );
             })}

@@ -97,7 +97,9 @@
     height: 420px;
   }
   .conteiner-checkout {
-    display: none;
+    /* display: none; */
+    width: 90%;
+    margin-bottom: 20vh;
   }
   .mobile-divces-checkout {
     position: fixed;
@@ -147,4 +149,5 @@
   .item-product-cart img {
     width: 80px;
   }
+
 }

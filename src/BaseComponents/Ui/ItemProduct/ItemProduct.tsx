@@ -1,6 +1,7 @@
 import React from "react";
 import "./ItemProduct.css";
 import Button from "../Button/Button";
+import { useAppNavigate } from "../../../Hooks/Navigation/useAppNavigate";
 
 interface ProductCardProps {
   image?: string;
@@ -23,6 +24,9 @@ const ItemProduct: React.FC<ProductCardProps> = ({
   quantity,
   title,
 }) => {
+
+
+
   return (
     <div className="product-card">
       <img src={image} alt={title} className="product-image" />
