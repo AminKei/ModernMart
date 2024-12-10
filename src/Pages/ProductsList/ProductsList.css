@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  width: 95%;
 }
 
 .products-list-container {
@@ -19,6 +20,7 @@
   grid-row-gap: 35px;
   width: 75%;
   float: right;
+  margin-top: 2vh;
 }
 
 .div-filter-conteiner {
@@ -28,6 +30,103 @@
 .div-filter-mobile-view {
   display: none;
 }
+
+
+
+/* filter */
+
+
+.sidebar {
+  position: fixed;
+  left: -100%;
+  width: 80%;
+  height: 800px;
+  background-color: transparent;
+  transition: 1s ease;
+  overflow: auto;
+  z-index: 1000;
+  padding: 20px;
+  border: rgb(184, 184, 184) solid 2px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  padding: 20px;
+  margin-top: 10vh;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Menu Button */
+.menu-button {
+  position: relative;
+  top: 35px;
+  font-size: 24px;
+  border: none;
+  margin-bottom: 10vh;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1100;
+  width: 0px;
+  background-color: transparent;
+}
+.menu-button :hover{
+  border: transparent;
+}
+
+
+
+/* Overlay for Mobile */
+.overlay2 {
+  position: fixed;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  cursor: pointer;
+}
+
+
+
+
+/* filter ens */
+
+
+/* Responsive Design */
+@media (min-width: 1468px) {
+  .menu-button {
+    display: none;
+  }
+
+  .sidebar {
+    left: -24px;
+    padding: 20px;
+    top: 28%;
+    height: 80%;
+    position: relative;
+    width: 20%;
+    background-color: black;
+    border-right: #fff solid 2px;
+  }
+
+  .overlay2 {
+    display: none;
+  }
+}
+
+
+
 
 @media only screen and (max-width: 1500px) {
   .title-products-list {

@@ -13,6 +13,9 @@ import { useAppNavigate } from "../../Hooks/Navigation/useAppNavigate";
 import Dropdown from "../../BaseComponents/Ui/Dropdown/Dropdown";
 import { useCart } from "../../Hooks/Cart/useCart";
 
+let menu =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png";
+
 const PRODUCTS_PER_PAGE = 12;
 
 const ProductsList = () => {
@@ -20,8 +23,16 @@ const ProductsList = () => {
   const openModal2 = () => setModalOpen2(true);
   const closeModal2 = () => setModalOpen2(false);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOption, setSortOption] = useState("More Buy");
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(1000000); // Set a default max price
   const { data, error, isLoading } = useProducts();
   const { goToProductDetails } = useAppNavigate();
 
@@ -42,16 +53,17 @@ const ProductsList = () => {
         return 0;
     }
   });
+  // Filter products by price range
+  const filteredProducts = sortedProducts.filter((product) => {
+    return product.price >= minPrice && product.price <= maxPrice;
+  });
 
-  // pagination :
+  // Pagination
   const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
-  const paginatedProducts = sortedProducts.slice(
+  const paginatedProducts = filteredProducts.slice(
     startIndex,
     startIndex + PRODUCTS_PER_PAGE
   );
-
-
-  
 
   return (
     <div>
@@ -62,13 +74,15 @@ const ProductsList = () => {
 
       {/* filter & sort */}
       <div className="products-list-sort-filter">
-        <h4>Found {data?.length} results for Nike</h4>
+        <h4>Found {filteredProducts.length} results for Nike</h4>
         <div className="div-filter-mobile-view">
           <Button
-            onClick={openModal2}
+            className="menu-button"
+            onClick={toggleSidebar}
             width={200}
             bgColor="#000"
             color="white"
+            fontSize={14}
             border="solid 1px white"
           >
             Filter
@@ -120,9 +134,49 @@ const ProductsList = () => {
         ))}
       </div>
 
-      <div className="div-filter-conteiner">
-        <FilterProducts />
+      {/* filter */}
+
+      <div className="div-filter">
+        <div>
+          {/* Sidebar */}
+          <div className={`sidebar ${isOpen ? "open" : ""}`}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h4>Property Filter</h4>
+              <p style={{ color: "gray" }}>Reset all</p>
+            </div>
+            <div style={{ display: "grid", width: "100%", gap: "15px" }}>
+              <label>Min Price: ${minPrice}</label>
+              <input
+              className="slider"
+                type="range"
+                value={minPrice}
+                onChange={(e) => setMinPrice(Number(e.target.value))}
+              />
+              <label>Max Price: ${maxPrice}</label>
+              <input
+              className="slider"
+                type="range"
+                value={maxPrice}
+                onChange={(e) => setMaxPrice(Number(e.target.value))}
+              />
+            </div>
+            <FilterProducts />
+          </div>
+
+          {/* Overlay (for mobile) */}
+          {isOpen && <div className="overlay2" onClick={toggleSidebar}></div>}
+        </div>
       </div>
+
+      {/* filter end */}
+
+      <div className="div-filter-conteiner">{/* <FilterProducts /> */}</div>
 
       <Pagination
         currentPage={currentPage}

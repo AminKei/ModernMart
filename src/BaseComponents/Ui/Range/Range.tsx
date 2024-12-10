@@ -5,7 +5,7 @@ interface SliderProps {
   min: number;
   max: number;
   value: number;
-  onChange: (value: number) => void;
+  onChange?:   React.ChangeEvent<HTMLInputElement>;
 }
 
 const Range: React.FC<SliderProps> = ({ max, min, value, onChange }) => {
@@ -13,7 +13,7 @@ const Range: React.FC<SliderProps> = ({ max, min, value, onChange }) => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Math.min(max, Math.max(min, Number(event.target.value)));
-    onChange(newValue);
+    // onChange(newValue);
   };
 
   return (
