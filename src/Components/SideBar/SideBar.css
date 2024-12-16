@@ -2,12 +2,13 @@
 .sidebar {
   color: white;
   width: 250px;
-  height: 78vh;
+  /* height: 78vh; */
   padding: 0px 20px 0px 0px;
   border-right: solid 2px white;
   margin-top: 4vh;
   transition: width 0.3s;
   cursor: pointer;
+  background: none ;
 }
 
 .sidebar-list {

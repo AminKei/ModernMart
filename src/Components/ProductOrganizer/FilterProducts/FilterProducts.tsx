@@ -7,7 +7,7 @@ import Checkbox from "../../../BaseComponents/Ui/Checkbox/Checkbox";
 import SizeElement from "../../SizeElement/SizeElement";
 import { useProducts } from "../../../Hooks/Products/useProducts";
 
-const options = ["Area 1", "Area 2", "Area 3", "Any area"];
+const options = ["Mens", "Womens", "Kids", "somthing else"];
 
 /* toggle */
 const toggleoption = ["Residential", "Commercial"];
@@ -33,7 +33,7 @@ const FilterProducts = () => {
     <div className="conteier-filter-products">
     
       <div className="property-filter">
-        <Dropdown options={options} label="Any area" />
+        <Dropdown options={options} label="Any Filter" />
         {/* <hr />e */}
         <p>Location:</p>
         <ToggleSwitch

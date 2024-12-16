@@ -150,17 +150,17 @@ const ProductsList = () => {
               <h4>Property Filter</h4>
               <p style={{ color: "gray" }}>Reset all</p>
             </div>
-            <div style={{ display: "grid", width: "100%", gap: "15px" }}>
+            <div style={{ display: "grid", width: "100%", gap: "15px" , marginBottom:"3vh" }}>
               <label>Min Price: ${minPrice}</label>
               <input
-              className="slider"
+                className="slider"
                 type="range"
                 value={minPrice}
                 onChange={(e) => setMinPrice(Number(e.target.value))}
               />
               <label>Max Price: ${maxPrice}</label>
               <input
-              className="slider"
+                className="slider"
                 type="range"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}

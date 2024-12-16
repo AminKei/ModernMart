@@ -12,7 +12,7 @@ const Favorites = () => {
 
   return (
     <div>
-      <h3>Favorites</h3>
+      <h4> Your Favorites Products :</h4>
       {fav.length === 0 ? (
         <p>
           Your Fevorite page is empty <a href="/productslist">return to products list</a>

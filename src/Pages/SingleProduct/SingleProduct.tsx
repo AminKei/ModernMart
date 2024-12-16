@@ -51,7 +51,7 @@ const SingleProduct = () => {
               src={data.images[0]}
               onError={(e) => {
                 e.currentTarget.src =
-                  "https://www.svgrepo.com/show/508699/landscape-placeholder.svg";
+                  "https://cdn.dribbble.com/users/1091213/screenshots/4203966/800_600.gif";
               }}
               alt={data?.title || "Product Image"}
             />

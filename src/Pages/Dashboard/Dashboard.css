@@ -1,0 +1,20 @@
+.div-root-dashboard{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-root-dash-fevo{
+    width: 50%;
+}
+
+@media only screen and (max-width:900px) {
+    .div-root-dashboard{
+        display: grid;
+    }
+    .div-root-dash-fevo{
+        width: 100%;
+        border-top: solid gray 2px;
+        margin-top: 4vh;
+        border-left: none;
+    }
+}

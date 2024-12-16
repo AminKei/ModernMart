@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({
         className="card-image"
         onError={(e) => {
           e.currentTarget.src =
-            "https://www.svgrepo.com/show/508699/landscape-placeholder.svg";
+            "https://cdn.dribbble.com/users/1091213/screenshots/4203966/800_600.gif";
         }}
       />
       <h2 className="card-title">{title}</h2>
