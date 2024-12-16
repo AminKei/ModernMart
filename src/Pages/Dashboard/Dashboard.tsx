@@ -57,6 +57,7 @@ const Dashboard = () => {
           <Button width={300} onClick={Logout}>
             Logout
           </Button>
+          <Orders/> 
         </div>
         <div className="div-root-dash-fevo">
           <Favorites />
