@@ -1,6 +1,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  top: 2px;
 }
 
 .dropdown-display {

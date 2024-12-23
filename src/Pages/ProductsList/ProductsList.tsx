@@ -11,10 +11,6 @@ import { useProducts } from "../../Hooks/Products/useProducts";
 import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 import { useAppNavigate } from "../../Hooks/Navigation/useAppNavigate";
 import Dropdown from "../../BaseComponents/Ui/Dropdown/Dropdown";
-import { useCart } from "../../Hooks/Cart/useCart";
-
-let menu =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png";
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -32,7 +28,7 @@ const ProductsList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOption, setSortOption] = useState("More Buy");
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(1000000); // Set a default max price
+  const [maxPrice, setMaxPrice] = useState(1000000);
   const { data, error, isLoading } = useProducts();
   const { goToProductDetails } = useAppNavigate();
 
@@ -101,14 +97,14 @@ const ProductsList = () => {
             bgColor="#000"
             color="white"
           >
-            The cheapest ones
+            cheapest
           </Button>
           <Button
             onClick={() => setSortOption("More Expensive")}
             bgColor="#000"
             color="white"
           >
-            The most expensive
+            expensive
           </Button>
           <Button bgColor="#000" color="white">
             More Buy
@@ -150,7 +146,7 @@ const ProductsList = () => {
               <h4>Property Filter</h4>
               <p style={{ color: "gray" }}>Reset all</p>
             </div>
-            <div style={{ display: "grid", width: "100%", gap: "15px" , marginBottom:"3vh" }}>
+            <div className="ranges-prices">
               <label>Min Price: ${minPrice}</label>
               <input
                 className="slider"
@@ -169,14 +165,9 @@ const ProductsList = () => {
             <FilterProducts />
           </div>
 
-          {/* Overlay (for mobile) */}
           {isOpen && <div className="overlay2" onClick={toggleSidebar}></div>}
         </div>
       </div>
-
-      {/* filter end */}
-
-      <div className="div-filter-conteiner">{/* <FilterProducts /> */}</div>
 
       <Pagination
         currentPage={currentPage}
