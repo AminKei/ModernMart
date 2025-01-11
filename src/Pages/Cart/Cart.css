@@ -50,13 +50,13 @@
 }
 
 .item-checkout {
-  display: flex; /* Flexbox for item alignment */
-  justify-content: space-between; /* Space between elements */
+  display: flex;
+  justify-content: space-between;
   margin: 20px 0;
 }
 
 .item-total {
-  font-weight: bold; /* Bold text for total */
+  font-weight: bold;
   margin-top: 2vh;
   margin-bottom: 2vh;
   display: flex;
@@ -149,5 +149,4 @@
   .item-product-cart img {
     width: 80px;
   }
-
 }

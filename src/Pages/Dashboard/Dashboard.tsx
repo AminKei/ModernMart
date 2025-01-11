@@ -1,14 +1,11 @@
 import Orders from "../../Components/OverviewDashbord/Orders/Orders";
 import "./Dashboard.css";
 import Favorites from "../../Components/OverviewDashbord/Favorites/Favorites";
-import TabBar from "../../Components/TabBar/TabBar";
 import { useProfile } from "../../Hooks/Auth/useProfile";
 import Information from "../../Components/OverviewDashbord/Information/Information";
-import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 import PlaceLoad from "../../BaseComponents/Ui/LoadTemplate/PlaceLoad/PlaceLoad";
 import Button from "../../BaseComponents/Ui/Button/Button";
 import { StorageKey } from "../../Config";
-import SideBar from "../../Components/SideBar/SideBar";
 
 const tabs = [
   {
@@ -57,7 +54,7 @@ const Dashboard = () => {
           <Button width={300} onClick={Logout}>
             Logout
           </Button>
-          <Orders/> 
+          <Orders />
         </div>
         <div className="div-root-dash-fevo">
           <Favorites />

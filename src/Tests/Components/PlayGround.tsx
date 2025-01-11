@@ -1,12 +1,6 @@
-import Dropdown from "../../BaseComponents/Ui/Dropdown/Dropdown";
-import "./playGround.css";
 
 const PlayGround = () => {
-  return (
-    <div>
-      <p>playground test:</p>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default PlayGround;

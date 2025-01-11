@@ -43,7 +43,7 @@
 
 @media only screen and (max-width: 1024px) {
   .div-container-login {
-    width: 100%; /* Adjust width for tablets */
+    width: 100%;
   }
 }
 
@@ -53,8 +53,7 @@
     flex-direction: column;
   }
   .div-container-login {
-    width: 100%; /* Increase width for small devices */
-    /* margin-top: -7vh; */
+    width: 100%;
   }
   .discraption-log-sign {
     text-align: center;
@@ -65,13 +64,13 @@
 
 @media only screen and (max-width: 480px) {
   .div-container-login {
-    padding: 15px; /* Reduce padding for mobile */
+    padding: 15px;
   }
   .inputs-login {
-    gap: 15px; /* Reduce gap between inputs */
+    gap: 15px;
   }
 
   .inputs-login label {
-    font-size: 14px; /* Adjust font size for labels */
+    font-size: 14px;
   }
 }

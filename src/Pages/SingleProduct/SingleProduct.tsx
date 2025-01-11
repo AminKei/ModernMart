@@ -9,7 +9,7 @@ import { useProductById } from "../../Hooks/Products/useProducts";
 import Loader from "../../BaseComponents/Ui/LoadTemplate/Loader/Loader";
 import PlaceLoad from "../../BaseComponents/Ui/LoadTemplate/PlaceLoad/PlaceLoad";
 import swal from "sweetalert";
-import { ProductModel, ProductObject } from "../../Models/Products";
+import { ProductObject } from "../../Models/Products";
 
 const SingleProduct = () => {
   const [searchParams] = useSearchParams();
@@ -25,7 +25,6 @@ const SingleProduct = () => {
       title: "Product Added To Cart!",
       icon: "success",
     });
-    // window.location.reload()
   };
 
   const addToFeivorite = (product: ProductObject) => {
@@ -36,7 +35,6 @@ const SingleProduct = () => {
       title: "Product Added To Favorite!",
       icon: "success",
     });
-    // window.location.reload()
   };
 
   
