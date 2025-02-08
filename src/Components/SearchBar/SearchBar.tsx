@@ -38,7 +38,7 @@ const SearchBar = () => {
         right: "30px",
         display: "flex",
         top: "50px",
-        cursor:"pointer"
+        cursor: "pointer",
       }}
     >
       {!isOpen && (

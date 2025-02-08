@@ -82,14 +82,14 @@
             <hr />
             <div className="item-total">
               <h4>Payment :</h4>
-              <span>${(totalOrderPrice + 20 - 10).toFixed(2)}</span>
+              <span>${(totalOrderPrice + 20 - 0).toFixed(2)}</span>
             </div>
             <Button height={45} className="button-checkout">
               Checkout
             </Button>
           </div>
           <div className="mobile-divces-checkout">
-            <span>${(totalOrderPrice + 20 - 80).toFixed(2)}</span>
+            <span>${(totalOrderPrice + 20 - 0).toFixed(2)}</span>
             <Button height={45} className="button-checkout2">
               Checkout
             </Button>

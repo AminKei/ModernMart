@@ -39,10 +39,6 @@ const FilterProducts = () => {
           Option1="Residential"
           Option2="Commercial"
         />
-        <p>Min Price :</p>
-        <Range max={100000} min={0} value={0} />
-        <p>Max Price :</p>
-        <Range max={100000} min={0} value={0} />
         <p>Filter Checked:</p>
         <Checkbox
           label="Single-Family"

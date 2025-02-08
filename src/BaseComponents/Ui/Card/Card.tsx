@@ -20,7 +20,6 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className="card" onClick={onClick}>
-      {/* <p className="gold-star">&#9733;</p> */}
       <img
         src={imageUrl}
         alt={title}

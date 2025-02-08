@@ -10,7 +10,7 @@ const HomeFirstLeyout = () => {
       </h1>
       <img
         width={1760}
-        src={`${process.env.PUBLIC_URL}/images/HomeImage.png`}
+        src={`${process.env.PUBLIC_URL}/images/home.jpg`}
         alt="Bohemian Style"
         className="center-image"
       />

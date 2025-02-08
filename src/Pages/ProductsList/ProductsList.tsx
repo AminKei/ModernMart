@@ -70,7 +70,7 @@ const ProductsList = () => {
 
       {/* filter & sort */}
       <div className="products-list-sort-filter">
-        <h4>Found {filteredProducts.length} results for Nike</h4>
+        <h4>Found {filteredProducts.length} results for Find it</h4>
         <div className="div-filter-mobile-view">
           <Button
             className="menu-button"

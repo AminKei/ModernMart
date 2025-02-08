@@ -23,6 +23,7 @@
   z-index: 0;
   position: relative;
   top: -10vh;
+  border-radius: 12px;
   height: 500px;
 }
 .center-button {
