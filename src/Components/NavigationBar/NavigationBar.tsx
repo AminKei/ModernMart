@@ -1,22 +1,23 @@
 import Button from "../../BaseComponents/Ui/Button/Button";
 import { useProfile } from "../../Hooks/Auth/useProfile";
 import "./NavigationBar.css";
-
+import { GoHome } from "react-icons/go";
+import { FiShoppingCart } from "react-icons/fi";
+import { BiCategory } from "react-icons/bi";
+import { LuUser } from "react-icons/lu";
 const NavigationBar = () => {
   const { data } = useProfile();
 
-
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
-
 
   return (
     <div className="bottom-nav">
       <div className="nav-item" onClick={() => (document.location = "/")}>
-        <img src={`${process.env.PUBLIC_URL}/icons/home.png`} />
+        <GoHome size={25} />
       </div>
       <div className="nav-item" onClick={() => (document.location = "/cart")}>
         <div className="cart-icon">
-          <img src={`${process.env.PUBLIC_URL}/icons/Frame.png`} />
+          <FiShoppingCart size={23} />
           <span className="cart-count">{cart.length}</span>
         </div>
       </div>
@@ -24,7 +25,7 @@ const NavigationBar = () => {
         className="nav-item"
         onClick={() => (document.location = "/productslist")}
       >
-        <img src={`${process.env.PUBLIC_URL}/icons/categoris.png`} />
+        <BiCategory size={25} />
       </div>
       <div className="nav-item">
         {data ? (
@@ -35,10 +36,7 @@ const NavigationBar = () => {
             onClick={() => (document.location = "/dashboard")}
           />
         ) : (
-          <img
-            src={`${process.env.PUBLIC_URL}/icons/Frame3.png`}
-            onClick={() => (document.location = "/login")}
-          />
+          <LuUser size={25} onClick={() => (document.location = "/login")} />
         )}
       </div>
     </div>

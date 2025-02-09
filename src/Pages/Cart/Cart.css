@@ -98,7 +98,7 @@
   }
   .conteiner-checkout {
     /* display: none; */
-    width: 90%;
+    width: 80%;
     margin-bottom: 20vh;
   }
   .mobile-divces-checkout {
@@ -106,7 +106,7 @@
     align-items: center;
     display: flex;
     bottom: 60px;
-    width: 90%;
+    width: 80%;
     padding: 10px;
     border-radius: 20px;
     right: 1vh;

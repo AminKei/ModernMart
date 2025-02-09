@@ -1,7 +1,6 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  top: 2px;
   width: 15%;
 }
 
@@ -46,8 +45,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .dropdown{
-    width: 100%;
+  .dropdown {
+    width: 120%;
+    right: 10px;
   }
   .dropdown-display {
     width: 100%;

@@ -132,7 +132,6 @@
   .products-list-sort-filter h4 {
     display: none;
   }
-  .products-list-sort-filter{}
   .products-list-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
