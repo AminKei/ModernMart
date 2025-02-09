@@ -67,8 +67,8 @@
 }
 @media only screen and (max-width: 768px) {
   .card {
-    width: 130px;
-    height: 200px;
+    width: 120px;
+    height: 220px;
     padding: 20px 20px;
   }
   .card-image{
